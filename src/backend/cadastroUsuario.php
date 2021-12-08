@@ -24,10 +24,8 @@
     echo 'Usuário já cadastrado';
   }else{
     // header("Location: https://123pagou.com.br/portal/atendimento/app/sucesso-documento.php");
-    
 
     if($senha != $senha2){
-        
         echo 'Senhas não correspondem';
         
     } else{
@@ -37,7 +35,6 @@
             $salvounobanco = mysqli_query($conn, $query);  
             
             if ($salvounobanco) {
-               
                 mysqli_close($conn);
                 // header("Location: https://123pagou.com.br/portal/atendimento/app/dataNascimento.php?codigo=$updateLead");
                 echo 'Usuário cadastrado com sucesso';
@@ -45,6 +42,7 @@
             } else {
                 //header("Location: https://123pagou.com.br/portal/atendimento/app/nomesobrenome.php?error=1");
                 echo 'Erro ao salvar no banco de dados';
+
             }
         } catch(Exception $e){
             echo "<p>(!) {$e->getMessage()}</p>";
