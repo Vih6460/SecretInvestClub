@@ -43,26 +43,26 @@
             </div>
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
-                <form>
+                <form action="./src/backend/cadastroUsuario.php" method="POST">
                   <div class="form-group">
                     <label for="exampleInputEmail1" class="lblLogin">Nome</label>
-                    <input type="text" class="form-control inputLogin" placeholder="Ex: João" required>
+                    <input type="text" class="form-control inputLogin" name="nome" placeholder="Ex: João" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1" class="lblLogin">Sobrenome</label>
-                    <input type="text" class="form-control inputLogin" placeholder="Ex: Silva" required>
+                    <input type="text" class="form-control inputLogin" name="sobrenome" placeholder="Ex: Silva" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1" class="lblLogin">Email</label>
-                    <input type="email" class="form-control inputLogin" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: nome@email.com" required>
+                    <input type="email" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: nome@email.com" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1" class="lblLogin">Senha</label>
-                    <input type="password" class="form-control inputLogin" id="exampleInputPassword1" placeholder="*********" required>
+                    <input type="password" class="form-control inputLogin" name="senha" id="exampleInputPassword1" placeholder="*********" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
-                    <input type="password" class="form-control inputLogin" id="exampleInputPassword1" placeholder="*********" required>
+                    <input type="password" class="form-control inputLogin" name="senha2" id="exampleInputPassword1" placeholder="*********" required>
                   </div>
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn mt-2 mb-0" id="btnEntrar">Cadastrar</button>

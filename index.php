@@ -1,3 +1,9 @@
+<?php
+
+  echo "";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -43,14 +49,14 @@
             </div>
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
-                <form>
+                <form method="POST" action="./valida.php">
                   <div class="form-group">
                     <label for="exampleInputEmail1" class="lblLogin">Email</label>
-                    <input type="email" class="form-control inputLogin" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome@email.com" required>
+                    <input type="email" class="form-control inputLogin" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="nome@email.com" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1" class="lblLogin">Senha</label>
-                    <input type="password" class="form-control inputLogin" id="exampleInputPassword1" placeholder="********" required>
+                    <input type="password" class="form-control inputLogin" id="exampleInputPassword1" name="senha" placeholder="********" required>
                   </div>
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn mt-2 mb-0" id="btnEntrar">Entrar</button>
