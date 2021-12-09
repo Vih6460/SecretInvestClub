@@ -44,34 +44,44 @@
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
                 <form action="./src/backend/cadastroUsuario.php" method="POST">
-                  <div class="form-group">
+                  <div class="row ui_text_field">
+                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="nome" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nome</label>
-                    <input type="text" class="form-control inputLogin" name="nome" placeholder="Ex: João" required>
                   </div>
-                  <div class="form-group">
+                  <div class="row ui_text_field">
+                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="sobrenome" required>
                     <label for="exampleInputEmail1" class="lblLogin">Sobrenome</label>
-                    <input type="text" class="form-control inputLogin" name="sobrenome" placeholder="Ex: Silva" required>
                   </div>
-                  <div class="form-group">
+                  <div class="row ui_text_field">
+                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="conta" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nº da Conta na Corretora</label>
-                    <input type="text" class="form-control inputLogin" name="conta" placeholder="Ex: 2143657" required>
                   </div>
-                  <div class="form-group">
+                  <div class="row ui_text_field">
+                    <input type="email" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     <label for="exampleInputEmail1" class="lblLogin">Email</label>
-                    <input type="email" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: nome@email.com" required>
                   </div>
+
+
+
                   <div class="row">
-                    <div class="col">
-                      <label for="exampleInputPassword1" class="lblLogin">Senha</label>
-                      <input type="password" class="form-control inputLogin" name="senha" placeholder="*********" required>
+                    <div class="col" style="padding: 0 0 0 0!important;">
+                      <div class="ui_text_field">
+                        <input type="password" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha" required>
+                        <label for="exampleInputPassword1" class="lblLogin">Senha</label>
+                      </div>
                     </div>
-                    <div class="col">
-                      <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
-                      <input type="password" class="form-control inputLogin" name="senha2" placeholder="*********" required>
+
+                    <div class="col" style="padding: 0 0 0 0!important;">
+                      <div class="ui_text_field">
+                        <input type="password" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha2" required>
+                        <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
+                      </div>
                     </div>
                   </div>
+
+
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn mt-4 mb-0" id="btnEntrar">Cadastrar</button>
+                    <button type="submit" class="btn mt-3 mb-0" id="btnEntrar">Cadastrar</button>
                   </div>
                 </form>
               </div>

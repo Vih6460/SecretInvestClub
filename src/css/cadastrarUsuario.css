@@ -1,3 +1,10 @@
+*, *:after, *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     background: black;
@@ -101,4 +108,52 @@ header{
     .lblLogin{
         font-size: 1rem;
     }
+}
+
+
+.ui_text_field{
+    position: relative;
+    padding: 7px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.ui_text_field input{
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #cbab23;
+    background: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.ui_text_field label{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    background-color: #140c01;
+    transition: all 0.3s ease-in-out;
+    padding: 0 5px;
+}
+
+.ui_text_field input:focus{
+    outline: 0;
+    box-shadow: inset 0px 0px 1px 1px rgb(255, 0, 0);
+    background: none;
+    color: white;
+}
+
+.ui_text_field input:focus + label{
+    margin-top: -25px;
+    color: white;
+}
+
+.ui_text_field input:not([value=""]) + label{
+    margin-top: -25px;
+    color: white;
 }
