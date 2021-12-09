@@ -39,6 +39,8 @@
                 mysqli_close($conn);
                 // header("Location: https://123pagou.com.br/portal/atendimento/app/dataNascimento.php?codigo=$updateLead");
                 echo 'Usuário cadastrado com sucesso';
+                //Redirecionar para página principal
+                header("Location: https://www.google.com.br");
           
             } else {
                 //header("Location: https://123pagou.com.br/portal/atendimento/app/nomesobrenome.php?error=1");
