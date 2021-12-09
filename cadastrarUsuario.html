@@ -29,8 +29,8 @@
     <body class="hold-transition login-page">
       
       <header>
-        <video autoplay="true" id="background" loop muted>
-            <source src="./src/img/videobackgroundBlue.mp4"> 
+        <video autoplay="true" id="background" loop muted poster="./src/img/imgBackgroundBlue.jpg" preload="auto">
+            <source src="./src/img/videobackgroundBlueLeve.mp4"> 
             <!-- <a href="https://pt.vecteezy.com/video/1626175-o-aumento-e-diminuicao-dos-valores-de-mercado-de-acoes">o aumento e diminuição dos valores do mercado de ações Vídeos de arquivo por Vecteezy</a> -->
         </video>
       </header>
@@ -53,19 +53,25 @@
                     <input type="text" class="form-control inputLogin" name="sobrenome" placeholder="Ex: Silva" required>
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputEmail1" class="lblLogin">Nº da Conta na Corretora</label>
+                    <input type="text" class="form-control inputLogin" name="conta" placeholder="Ex: 2143657" required>
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1" class="lblLogin">Email</label>
                     <input type="email" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: nome@email.com" required>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1" class="lblLogin">Senha</label>
-                    <input type="password" class="form-control inputLogin" name="senha" id="exampleInputPassword1" placeholder="*********" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
-                    <input type="password" class="form-control inputLogin" name="senha2" id="exampleInputPassword1" placeholder="*********" required>
+                  <div class="row">
+                    <div class="col">
+                      <label for="exampleInputPassword1" class="lblLogin">Senha</label>
+                      <input type="password" class="form-control inputLogin" name="senha" placeholder="*********" required>
+                    </div>
+                    <div class="col">
+                      <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
+                      <input type="password" class="form-control inputLogin" name="senha2" placeholder="*********" required>
+                    </div>
                   </div>
                   <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn mt-2 mb-0" id="btnEntrar">Cadastrar</button>
+                    <button type="submit" class="btn mt-4 mb-0" id="btnEntrar">Cadastrar</button>
                   </div>
                 </form>
               </div>

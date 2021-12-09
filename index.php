@@ -35,8 +35,8 @@
     <body class="hold-transition login-page">
       
       <header>
-        <video autoplay="true" id="background" loop muted>
-            <source src="./src/img/videobackgroundBlue.mp4"> 
+        <video autoplay="true" id="background" loop muted poster="./src/img/imgBackgroundBlue.jpg" preload="auto">
+            <source src="./src/img/videobackgroundBlueLeve.mp4"> 
             <!-- <a href="https://pt.vecteezy.com/video/1626175-o-aumento-e-diminuicao-dos-valores-de-mercado-de-acoes">o aumento e diminuição dos valores do mercado de ações Vídeos de arquivo por Vecteezy</a> -->
         </video>
       </header>
@@ -51,8 +51,8 @@
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
                 <form method="POST" action="./valida.php">
                   <div class="form-group">
-                    <label for="exampleInputEmail1" class="lblLogin">Email</label>
-                    <input type="email" class="form-control inputLogin" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="nome@email.com" required>
+                    <label for="exampleInputEmail1" class="lblLogin">Conta</label>
+                    <input type="text" class="form-control inputLogin" name="email" placeholder="Ex: 2143657" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1" class="lblLogin">Senha</label>

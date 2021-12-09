@@ -5,12 +5,13 @@
 
   $nome = $_POST['nome'];
   $sobrenome = $_POST['sobrenome'];
+  $conta = $_POST['conta'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
   $senha2 = $_POST['senha2'];
 
 
-  $sql = "SELECT * FROM `tbl_usuarios_site` WHERE Email = '$email'";
+  $sql = "SELECT * FROM `tbl_usuarios_site` WHERE Conta = '$conta'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -31,7 +32,7 @@
     } else{
 
         try{
-            $query = "INSERT INTO `tbl_usuarios_site`(`Nome`, `Sobrenome`, `Email`, `Senha`) VALUES ('$nome','$sobrenome','$email','$senha')";
+            $query = "INSERT INTO `tbl_usuarios_site`(`Nome`, `Sobrenome`, `Conta`, `Email`, `Senha`) VALUES ('$nome', '$sobrenome', '$conta', '$email', '$senha')";
             $salvounobanco = mysqli_query($conn, $query);  
             
             if ($salvounobanco) {
