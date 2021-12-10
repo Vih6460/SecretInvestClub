@@ -4,7 +4,7 @@
 	session_start();
 
 	require("./conecta.php");
-	
+
 	$contaLogin = $_POST['conta'];
 	$senhalogin = $_POST['senha'];
 
@@ -57,10 +57,11 @@
 				//header("Location: http://localhost/atendimento/views/dashboard/");
 				// header("Location: https://123pagou.com.br/portal/atendimento/views/contato-site/index.php");
 
-				foreach ($_SESSION as $key => $value) { 
-					echo $key." => ".$value."<br/>";
-				}
-				echo "<br/>Usuário logado com sucesso";
+				// foreach ($_SESSION as $key => $value) { 
+				// 	echo $key." => ".$value."<br/>";
+				// }
+				// echo "<br/>Usuário logado com sucesso";
+				print_r($_SESSION);
 
 			} else {
 				$_SESSION['loginErro'] = "Aguardando liberação de acesso!";
