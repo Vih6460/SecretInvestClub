@@ -71,7 +71,6 @@
 				header("Location: ./valida2.php");
 			}
 			
-
 		} else {
 			$_SESSION['loginErro'] = "Usuario ou senha nao localizados!";
 			// header("Location: http://localhost/SecretInvestClub/index.php");
