@@ -1,3 +1,10 @@
+*, *:after, *:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     background: black;
@@ -45,54 +52,89 @@ header{
     width: 60%;
 }
 
-.lblLogin{
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.inputLogin{
-    border: 1px solid #cbab23;
-    background-color: rgb(236, 236, 236);
-    font-weight: bold;
-}
-
-.inputLogin:focus{
-    box-shadow: 0 0 0 0!important;
-    border: 2px solid #cbab23!important;
-    font-weight: bold;
-}
-
 #btnEntrar{
     background-color: #cbab23;
-    color: white;
-    font-weight: bold;
+    color: #140c01;
+    font-weight: 900;
     font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0); 
+    text-shadow: 0px 0px 0px rgb(0 0 0);
     width: 100px;
-    box-shadow: 2px 2px 10px 2px #000000;
+    transition: .3s;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 #btnEntrar:hover{
     box-shadow: none;
-    background-color: #e2be1b;
+    background-color: #ffd000;
     transition: .3s;
 }
 
 @media only screen and (min-width: 500px) {
     #cardLogin{
-        width: 70%;
-        max-width: 500px;
+        width: 60%;
+        max-width: 450px;
     }
 }
 @media only screen and (min-width: 800px) {
     #cardLogin{
-        width: 60%;
-        max-width: 500px;
+        width: 50%;
+        max-width: 450px;
     }
 }
 @media only screen and (min-width: 1200px) {
     #cardLogin{
-        width: 40%;
-        max-width: 550px;
+        width: 30%;
+        max-width: 5000px;
     }
+}
+
+.ui_text_field{
+    position: relative;
+    padding: 7px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.ui_text_field input{
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #cbab23;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.ui_text_field label{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    padding: 0 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    background-color: #140c01;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.ui_text_field input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0!important;
+    border: 2px solid #cbab23!important;
+    background: none;
+    color: white;
+    font-weight: 900;
+}
+
+.ui_text_field input:focus + label{
+    margin-top: -25px;
+    color: white;
+}
+
+.ui_text_field input:not([value=""]) + label{
+    margin-top: -25px;
+    color: white;
 }

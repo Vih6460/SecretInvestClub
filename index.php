@@ -50,13 +50,13 @@
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
                 <form method="POST" action="./valida.php">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1" class="lblLogin">Conta</label>
-                    <input type="text" class="form-control inputLogin" name="email" placeholder="Ex: 2143657" required>
+                  <div class="row ui_text_field">
+                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="email" required>
+                    <label for="exampleInputEmail1" class="lblLogin">Nº da Conta</label>
                   </div>
-                  <div class="form-group">
+                  <div class="row ui_text_field">
+                    <input type="password" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" id="exampleInputPassword1" name="senha" required>
                     <label for="exampleInputPassword1" class="lblLogin">Senha</label>
-                    <input type="password" class="form-control inputLogin" id="exampleInputPassword1" name="senha" placeholder="********" required>
                   </div>
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn mt-2 mb-0" id="btnEntrar">Entrar</button>
