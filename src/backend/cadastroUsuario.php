@@ -20,7 +20,7 @@
     //   }
     // }
 
-    echo 'Usuário já cadastrado'; //Redirecionar para uma tela informando que a conta ja esta cadastrada
+    echo 'Nº de conta já cadastrado'; //Redirecionar para uma tela informando que a conta ja esta cadastrada
   }else{
     // header("Location: https://123pagou.com.br/portal/atendimento/app/sucesso-documento.php");
 
@@ -53,7 +53,7 @@
         $senha_criptografada = encrypt_decrypt('encrypt', $senha);
 
         try{
-            $query = "INSERT INTO `tbl_usuarios_site`(`Nome`, `Sobrenome`, `Conta`, `Email`, `Senha`) VALUES ('$nome', '$sobrenome', '$conta', '$email', '$senha_criptografada')";
+            $query = "INSERT INTO `tbl_usuarios_site`(`Nome`, `Sobrenome`, `Conta`, `Email`, `Senha`, `Status`) VALUES ('$nome', '$sobrenome', '$conta', '$email', '$senha_criptografada', 'AGUARDANDO LIBERACAO')";
             $salvounobanco = mysqli_query($conn, $query);  
             
             if ($salvounobanco) {

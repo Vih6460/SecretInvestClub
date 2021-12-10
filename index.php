@@ -51,7 +51,7 @@
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
                 <form method="POST" action="./valida.php">
                   <div class="row ui_text_field">
-                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="email" required>
+                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="conta" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nº da Conta</label>
                   </div>
                   <div class="row ui_text_field">
