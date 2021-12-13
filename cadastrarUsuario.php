@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -84,6 +89,16 @@
                     <button type="submit" class="btn mt-3 mb-0" id="btnEntrar">Cadastrar</button>
                   </div>
                 </form>
+              </div>
+              <div class="mt-2 text-center text-danger" id="mensagemErro"> <!-- Mensagem de erro de login -->
+                <p>
+                  <?php 
+                    if (isset($_SESSION['erroCadastro'])) {
+                      echo $_SESSION['erroCadastro'];
+                      unset($_SESSION['erroCadastro']);
+                    } 
+                  ?>
+                </p>
               </div>
             </div>
           </div>

@@ -74,14 +74,6 @@
                     } 
                   ?>
                 </p>
-                <!-- <p class="text-center text-success">
-                  <?php
-                    if (isset($_SESSION['logindeslogado'])) {
-                      echo $_SESSION['logindeslogado'];
-                      unset($_SESSION['logindeslogado']);
-                    }  
-                  ?>
-                </p> -->
               </div>
             </div>
           </div>
