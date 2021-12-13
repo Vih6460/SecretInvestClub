@@ -52,6 +52,11 @@ header{
     width: 60%;
 }
 
+#mensagemErro p{
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
 #btnEntrar{
     background-color: #cbab23;
     color: #140c01;

@@ -65,6 +65,24 @@
                   </div>
                 </form>
               </div>
+              <div class="mt-2 text-center text-danger" id="mensagemErro"> <!-- Mensagem de erro de login -->
+                <p>
+                  <?php 
+                    if (isset($_SESSION['loginErro'])) {
+                      echo $_SESSION['loginErro'];
+                      unset($_SESSION['loginErro']);
+                    } 
+                  ?>
+                </p>
+                <!-- <p class="text-center text-success">
+                  <?php
+                    if (isset($_SESSION['logindeslogado'])) {
+                      echo $_SESSION['logindeslogado'];
+                      unset($_SESSION['logindeslogado']);
+                    }  
+                  ?>
+                </p> -->
+              </div>
             </div>
           </div>
         </div>
