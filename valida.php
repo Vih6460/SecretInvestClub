@@ -68,19 +68,19 @@
 				$_SESSION['loginErro'] = "Aguardando liberação de acesso!";
 				// header("Location: http://localhost/SecretInvestClub/index.php");
 				echo $_SESSION['loginErro'];
-				header("Location: ./valida2.php");
+				//Aqui vai voltar pra tela de login
 			}
 			
 		} else {
 			$_SESSION['loginErro'] = "Usuario ou senha nao localizados!";
 			// header("Location: http://localhost/SecretInvestClub/index.php");
 			echo $_SESSION['loginErro'];
-			header("Location: ./valida2.php");
+			//Aqui vai voltar pra tela de login
 		}
 
 	} else {
 		$_SESSION['loginErro'] = "Sistema em manutenção, tente mais tarde!";
 		// header("Location: http://localhost/SecretInvestClub/index.php");
 		echo $_SESSION;
-		header("Location: ./valida2.php");
+		//Aqui vai voltar pra tela de login
 	}
