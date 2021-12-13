@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
-                <form action="./src/backend/cadastroUsuario.php" method="POST">
+              <form id="form_cadastro">
                   <div class="row ui_text_field">
                     <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="nome" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nome</label>
@@ -113,7 +113,12 @@
       <script src="./src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- AdminLTE App -->
       <script src="./src/dist/js/adminlte.min.js"></script>
-    
+      <!-- AJAX -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- SweetAlert -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <!-- Personal Script -->
+      <script src="./src/js/script.js"></script>
 
     </body>
 </html>

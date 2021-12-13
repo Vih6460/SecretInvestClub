@@ -174,18 +174,17 @@ header{
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 321px) {
     .ui_text_field label{
-        font-size: .8rem;
+        font-size: .75rem;
     }
 
     .card-body{
         padding: 1.25rem 0;
     }
-}
 
-@media only screen and (max-width: 320px) {
-    .ui_text_field label{
-        font-size: .75rem;
+    #mensagemErro p{
+        font-size: .9rem;
     }
+
 }
