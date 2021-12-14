@@ -39,6 +39,20 @@ function cadastrarUsuario(e) {
     );
 }
 
+
+
+$("#form_cadastro").submit(function (e) {
+    e.preventDefault(),
+    
+    Swal.fire({
+        title: "Aguarde...",
+        onBeforeOpen: () => {
+            Swal.showLoading();
+        },
+    });
+    cadastrarUsuario($(this));
+});
+
 // function cadastrarUsuario() {
 //     var t = {
 //         url: "./src/backend/cadastroUsuario.php",
@@ -79,15 +93,3 @@ function cadastrarUsuario(e) {
 //             Swal.fire("Erro ao realizar cadastro.", "Contate nosso suporte.", "error");
 //         });
 // }
-
-$("#form_cadastro").submit(function (e) {
-    e.preventDefault(),
-    
-    Swal.fire({
-        title: "Aguarde...",
-        onBeforeOpen: () => {
-            Swal.showLoading();
-        },
-    });
-    cadastrarUsuario($(this));
-});
