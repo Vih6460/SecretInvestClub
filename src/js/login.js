@@ -2,23 +2,6 @@
 
 function login(e) {
     $.ajax({ type: "POST", data: e.serialize(), url: "./src/backend/valida.php"}).then(
-        // function (e) {
-        //     $sucesso = $.parseJSON(e).sucesso;
-        //     $msgErro = $.parseJSON(e).erroLogin;
-        //     // console.log($msgErro),
-        //     if(!$sucesso){
-        //         Swal.fire({ title: "Falha ao realizar login.", text: "Verifique os campos e tente novamente", icon: "error", confirmButtonText: "Voltar", position: "center" }),
-        //         document.getElementById("txtMensagemErro").textContent = $msgErro,
-        //         document.getElementById("mensagemErro").style.display = "block";
-        //     }
-        // },
-        // function () {
-        //     Swal.fire({ title: "Erro ao realizar cadastro.", text: "Contate nosso suporte.", icon: "error", confirmButtonText: "Voltar", position: "center" });
-        //     document.getElementById("txtMensagemErro").textContent = "",
-        //     document.getElementById("mensagemErro").style.display = "none";
-        // }
-
-
         function (e) {
             ($sucesso = $.parseJSON(e).sucesso),
             ($msgErro = $.parseJSON(e).erroLogin),
@@ -37,7 +20,6 @@ function login(e) {
     );
 }
 
-// window.location.href = "http://www.devmedia.com.br";
 
 $("#formLogin").submit(function (e) {
     e.preventDefault(),
