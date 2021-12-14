@@ -3,7 +3,7 @@
   require_once('../../conecta.php');
 
   session_start();
-
+  
   $nome = $_POST['nome'];
   $sobrenome = $_POST['sobrenome'];
   $conta = $_POST['conta'];
@@ -12,7 +12,8 @@
   $senha2 = $_POST['senha2'];
 
   if ($senha != $senha2) {
-    $_SESSION['erroCadastro'] = 'Senhas diferentes. Tente novamente.';
+    // $_SESSION['erroCadastro'] = 'Senhas diferentes. Tente novamente.';
+    $retorno['erroCadastro'] = 'Senhas diferentes. Tente novamente.';
     $retorno["sucesso"] = false;
 
   } else {
@@ -20,7 +21,8 @@
     $result = $conn->query($sql);
       
     if ($result->num_rows > 0) {
-      $_SESSION['erroCadastro'] = 'Nº de conta já cadastrado.';
+      // $_SESSION['erroCadastro'] = 'Nº de conta já cadastrado.';
+      $retorno['erroCadastro'] = 'Nº de conta já cadastrado.';
       $retorno["sucesso"] = false;
     
     } else {
@@ -59,12 +61,14 @@
               
           
           } else {
-              $_SESSION['erroCadastro'] = 'Erro ao salvar no banco de dados';
+              // $_SESSION['erroCadastro'] = 'Sistema em manutenção, contate o suporte.';
+              $retorno['erroCadastro'] = 'Sistema em manutenção, contate o suporte.';
               $retorno["sucesso"] = false;
       
           }
       } catch(Exception $e){
-        $_SESSION['erroCadastro'] = 'Falha ao salvar no banco de dados';
+        // $_SESSION['erroCadastro'] = 'Sistema indisponível, contate o suporte.';
+        $retorno['erroCadastro'] = 'Sistema indisponível, contate o suporte.';
         $retorno["sucesso"] = false;
       }
 
@@ -84,7 +88,6 @@
   ///////////////////////////  ///////////////////////////  ///////////////////////////  ///////////////////////////
 
 
-  // <?php
 
   // require_once('../../conecta.php');
 

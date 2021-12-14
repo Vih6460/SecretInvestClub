@@ -4,6 +4,8 @@ function cadastrarUsuario(e) {
     $.ajax({ type: "POST", data: e.serialize(), url: "./src/backend/cadastroUsuario.php"}).then(
         function (e) {
             ($sucesso = $.parseJSON(e).sucesso),
+            ($msgErro = $.parseJSON(e).erroCadastro),
+            console.log($msgErro),
                 $sucesso
                     ? (Swal.fire({ title: "Cadastro realizado com sucesso!", text: "Em breve entraremos em contato.", icon: "success", confirmButtonText: "Entendi", position: "center", showConfirmButton: "false"}),
                         document.getElementById("nome").value = "",
@@ -23,8 +25,13 @@ function cadastrarUsuario(e) {
                         inputSenha.setAttribute('value', inputSenha.value),
                         document.getElementById("senha2").value = "",
                         inputSenha2 = document.getElementById("senha2"),
-                        inputSenha2.setAttribute('value', inputSenha2.value))
-                    : Swal.fire({ title: "Falha ao realizar cadastro.", text: "Verifique os campos e tente novamente", icon: "error", confirmButtonText: "Voltar", position: "center" });
+                        inputSenha2.setAttribute('value', inputSenha2.value),
+                        document.getElementById("txtMensagemErro").textContent = "",
+                        document.getElementById("mensagemErro").style.display = "none")
+                        
+                    : (Swal.fire({ title: "Falha ao realizar cadastro.", text: "Verifique os campos e tente novamente", icon: "error", confirmButtonText: "Voltar", position: "center" }),
+                        document.getElementById("txtMensagemErro").textContent = $msgErro,
+                        document.getElementById("mensagemErro").style.display = "block");
         },
         function () {
             Swal.fire({ title: "Erro ao realizar cadastro.", text: "Contate nosso suporte.", icon: "error", confirmButtonText: "Voltar", position: "center" });
