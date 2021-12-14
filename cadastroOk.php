@@ -49,45 +49,47 @@
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
               <form id="form_cadastro">
+
                   <div class="row ui_text_field">
-                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="nome" required>
+                    <input type="text" id="nome" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="nome" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nome</label>
                   </div>
+
                   <div class="row ui_text_field">
-                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="sobrenome" required>
+                    <input type="text" id="sobrenome" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="sobrenome" required>
                     <label for="exampleInputEmail1" class="lblLogin">Sobrenome</label>
                   </div>
+
                   <div class="row ui_text_field">
-                    <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="conta" required>
+                    <input type="text" id="conta" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="conta" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nº da Conta na Corretora</label>
                   </div>
+
                   <div class="row ui_text_field">
-                    <input type="email" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <input type="email" id="email" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     <label for="exampleInputEmail1" class="lblLogin">Email</label>
                   </div>
-
-
 
                   <div class="row">
                     <div class="col" style="padding: 0!important;">
                       <div class="ui_text_field">
-                        <input type="password" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha" required>
+                        <input type="password" id="senha" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha" required>
                         <label for="exampleInputPassword1" class="lblLogin">Senha</label>
                       </div>
                     </div>
 
                     <div class="col" style="padding: 0!important;">
                       <div class="ui_text_field">
-                        <input type="password" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha2" required>
+                        <input type="password" id="senha2" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="senha2" required>
                         <label for="exampleInputPassword1" class="lblLogin">Confirmar Senha</label>
                       </div>
                     </div>
                   </div>
 
-
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn mt-3 mb-0" id="btnEntrar">Cadastrar</button>
                   </div>
+
                 </form>
               </div>
               <div class="mt-2 text-center text-danger" id="mensagemErro"> <!-- Mensagem de erro de login -->
