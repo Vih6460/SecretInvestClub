@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-12">
               <div class="card-body pb-2" style="color: white; background-color: rgba(255, 255, 255, 0);">
-                <form method="POST" action="./valida.php">
+                <form id="formLogin">
                   <div class="row ui_text_field">
                     <input type="text" value="" onchange="this.setAttribute('value', this.value)" class="form-control inputLogin" name="conta" required>
                     <label for="exampleInputEmail1" class="lblLogin">Nº da Conta</label>
@@ -65,15 +65,8 @@
                   </div>
                 </form>
               </div>
-              <div class="mt-2 text-center text-danger" id="mensagemErro"> <!-- Mensagem de erro de login -->
-                <p>
-                  <?php 
-                    if (isset($_SESSION['loginErro'])) {
-                      echo $_SESSION['loginErro'];
-                      unset($_SESSION['loginErro']);
-                    } 
-                  ?>
-                </p>
+              <div class="mt-2 text-center text-danger" id="mensagemErro" style="display: none;"> <!-- Mensagem de erro de login -->
+                <p id="txtMensagemErro"></p>
               </div>
             </div>
           </div>
@@ -88,6 +81,12 @@
       <script src="./src/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- AdminLTE App -->
       <script src="./src/dist/js/adminlte.min.js"></script>
+      <!-- AJAX -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- SweetAlert -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <!-- Personal Script -->
+      <script src="./src/js/login.js"></script>
     
 
     </body>

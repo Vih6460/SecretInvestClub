@@ -54,30 +54,35 @@
 			$_SESSION['modificado'] = $resultado['Modificado'];
 
 			if ($_SESSION['status'] != "AGUARDANDO LIBERACAO") {
-				//header("Location: http://localhost/atendimento/views/dashboard/");
-				// header("Location: https://123pagou.com.br/portal/atendimento/views/contato-site/index.php");
-
 				// foreach ($_SESSION as $key => $value) { 
 				// 	echo $key." => ".$value."<br/>";
 				// }
 				// echo "<br/>Usuário logado com sucesso";
-				print_r($_SESSION);
-				header("Location: ./paginaPrincipal.php");
+				// print_r($_SESSION);
+				$retorno["sucesso"] = true;
+				echo json_encode($retorno);
+				// header("Location: ./paginaPrincipal.php");
 
 			} else {
 				$_SESSION['loginErro'] = "Aguardando liberação de acesso!";
-				//Aqui vai voltar pra tela de login
-				header("Location: http://localhost/SecretInvestClub/index.php");
+
+				$retorno['erroLogin'] = 'Aguardando liberação de acesso!';
+        		$retorno["sucesso"] = false;
+				echo json_encode($retorno);
 			}
 			
 		} else {
 			$_SESSION['loginErro'] = "Usuario ou senha inválidos!";
-			//Aqui vai voltar pra tela de login
-			header("Location: http://localhost/SecretInvestClub/index.php");
+
+			$retorno['erroLogin'] = 'Usuario ou senha inválidos!';
+        	$retorno["sucesso"] = false;
+			echo json_encode($retorno);
 		}
 
 	} else {
 		$_SESSION['loginErro'] = "Sistema em manutenção, tente mais tarde!";
-		//Aqui vai voltar pra tela de login
-		header("Location: http://localhost/SecretInvestClub/index.php");
+
+		$retorno['erroLogin'] = 'Sistema em manutenção, tente mais tarde!';
+        $retorno["sucesso"] = false;
+		echo json_encode($retorno);
 	}
