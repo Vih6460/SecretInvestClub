@@ -7,7 +7,7 @@ function login(e) {
             ($msgErro = $.parseJSON(e).erroLogin),
             // console.log($msgErro),
                 $sucesso
-                    ? (window.location.href = "./paginaPrincipal.php")     
+                    ? (window.location.href = "./views/dashboard.php")     
                     : (Swal.fire({ title: "Falha ao realizar login.", text: "Verifique os campos e tente novamente", icon: "error", confirmButtonText: "Voltar", position: "center" }),
                         document.getElementById("txtMensagemErro").textContent = $msgErro,
                         document.getElementById("mensagemErro").style.display = "block");
