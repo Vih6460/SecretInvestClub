@@ -2,11 +2,12 @@
 
 session_start();
 
-if(!isset($_SESSION['conta'])){
-    $_SESSION['erroLoginExpiracao'] = "Sessão expirada, faça login novamente!";
-    //Aqui vai voltar pra tela de login
-    header("Location: http://localhost/SecretInvestClub/index.php");
-}
+  if (!isset($_SESSION['conta'])) {
+      $_SESSION['erroLoginExpiracao'] = "Sessão expirada, faça login novamente!";
+      //Aqui vai voltar pra tela de login
+      header("Location: http://localhost/SecretInvestClub/index.php");
+
+  }
 
 ?>
 
@@ -79,7 +80,7 @@ if(!isset($_SESSION['conta'])){
           <img src="dist/img/robot.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info" style="white-space: normal;">
-          <a class="d-block">Vinicius</a>
+          <a class="d-block"><?php echo $_SESSION['nome']; ?></a>
         </div>
       </div>
 
@@ -92,13 +93,13 @@ if(!isset($_SESSION['conta'])){
           <div>  <!-- Informações do Robô -->   
             <li class="nav-header">Informações do Robô</li>
             <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-info-circle pr-2"></i>
-                <p>Dados</p>
+                <p>Monitoramento</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/kanban.html" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-cog pr-2"></i>
                 <p>Ajustes</p>
               </a>
@@ -108,13 +109,13 @@ if(!isset($_SESSION['conta'])){
           <div> <!-- Informações das Operações -->
             <li class="nav-header">Informações das Operações</li>
             <li class="nav-item">
-              <a href="iframe.html" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-history pr-2"></i>
                 <p>Histórico</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-chart-line pr-2"></i>
                 <p>Estatísticas</p>
               </a>
@@ -124,29 +125,29 @@ if(!isset($_SESSION['conta'])){
           <div> <!-- Informações de Plataforma -->
             <li class="nav-header">Informações de Plataforma</li>
             <li class="nav-item">
-              <a href="iframe.html" class="nav-link">
+              <a href="#" class="nav-link">
               <i class="nav-icon fas fa-globe pr-2"></i>
                 <p>MetaTrader 5</p>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="https://adminlte.io/docs/3.1/" class="nav-link">
                 <i class="nav-icon fas fa-landmark pr-2"></i>
                 <p>Corretora</p>
               </a>
-            </li>
+            </li> -->
           </div>
 
           <div> <!-- Informações Pessoais -->
             <li class="nav-header">Informações Pessoais</li>
             <li class="nav-item">
-              <a href="iframe.html" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-file-contract pr-2"></i>
                 <p>Plano</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-user pr-2"></i>
                 <p>Perfil</p>
               </a>
