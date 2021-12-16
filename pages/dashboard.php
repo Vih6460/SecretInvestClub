@@ -11,7 +11,7 @@ if(!isset($_SESSION['conta'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,17 +83,6 @@ if(!isset($_SESSION['conta'])){
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -744,11 +733,7 @@ if(!isset($_SESSION['conta'])){
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col12">
-            <h1 class="m-0">Informações sobre o robô</h1>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
+
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -759,9 +744,9 @@ if(!isset($_SESSION['conta'])){
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-
         <!-- Main row -->
         <div class="row">
+
         </div>
         <!-- /.row -->
       </div><!--/. container-fluid -->
