@@ -27,6 +27,16 @@ session_start();
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <style>
+    #nome_usuario_sidebar:hover{
+      color: #c2c7d0;
+    }
+    #nome_empresa_sidebar:hover{
+      color: rgba(255,255,255,.8);
+    }
+  </style>
+
 </head>
 <!-- <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"> -->
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed">
@@ -66,7 +76,7 @@ session_start();
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
     <!-- Brand Logo -->
-    <a class="brand-link">
+    <a class="brand-link" id="nome_empresa_sidebar">
       <img src="../src/img/$comEscudo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; border-radius: 0!important; box-shadow: none!important;">
       <span class="brand-text font-weight-light">Secret Invest Club</span>
     </a>
@@ -80,7 +90,7 @@ session_start();
           <img src="dist/img/robot.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info" style="white-space: normal;">
-          <a class="d-block"><?php echo $_SESSION['nome']; ?></a>
+          <a class="d-block" id="nome_usuario_sidebar"><?php echo $_SESSION['nome']; ?></a>
         </div>
       </div>
 
