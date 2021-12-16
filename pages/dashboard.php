@@ -2,12 +2,8 @@
 
 session_start();
 
-if(isset($_SESSION['conta'])){
-    print_r($_SESSION);
-    //Conteúdo da página principal
-} else {
-    // echo "Sessão expirada, faça login novamente";
-    $_SESSION['loginErro'] = "Sessão expirada, faça login novamente!";
+if(!isset($_SESSION['conta'])){
+    $_SESSION['erroLoginExpiracao'] = "Sessão expirada, faça login novamente!";
     //Aqui vai voltar pra tela de login
     header("Location: http://localhost/SecretInvestClub/index.php");
 }
@@ -37,7 +33,7 @@ if(isset($_SESSION['conta'])){
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="../src/img/favicon.ico" alt="SecretInvestClub logo" width="150" height="auto">
+    <img class="animation__wobble" src="../src/img/$comEscudo.png" alt="SecretInvestClub logo" width="150" height="auto">
   </div>
 
   <!-- Navbar -->
@@ -68,15 +64,22 @@ if(isset($_SESSION['conta'])){
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="../src/img/$comEscudo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; border-radius: 0!important; box-shadow: none!important;">
+      <span class="brand-text font-weight-light">Secret Invest Club</span>
+    </a>
+
     <!-- Sidebar -->
-    <div class="sidebar" style="margin-top: 0!important; padding-bottom: 0!important;">
+    <!-- <div class="sidebar" style="margin-top: 0!important; padding-bottom: 0!important; height:100vh!important"> -->
+    <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
         <div class="image">
           <img src="dist/img/robot.png" class="img-circle elevation-2" alt="User Image">
         </div>
-        <div class="info">
-          <a class="d-block">Carlos</a>
+        <div class="info" style="white-space: normal;">
+          <a class="d-block">Vinicius</a>
         </div>
       </div>
 

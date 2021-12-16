@@ -68,6 +68,14 @@
               <div class="mt-2 text-center text-danger" id="mensagemErro" style="display: none;"> <!-- Mensagem de erro de login -->
                 <p id="txtMensagemErro"></p>
               </div>
+              <?php 
+                  if(isset($_SESSION['erroLoginExpiracao'])){
+                    echo '<div class="mt-2 text-center text-danger">';
+                    echo '<p class="mb-0">Sessão expirada, faça login novamente!</p>';
+                    echo '</div>';
+                    unset($_SESSION['erroLoginExpiracao']);
+                  }
+              ?>
             </div>
           </div>
         </div>
