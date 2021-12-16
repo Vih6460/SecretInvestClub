@@ -35,6 +35,14 @@ session_start();
     #nome_empresa_sidebar:hover{
       color: rgba(255,255,255,.8);
     }
+    #navItemAtual{
+        color: white;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px black;
+    }
+    #navItemAtual:hover{
+        cursor: default;
+    }
   </style>
 
 </head>
@@ -103,7 +111,7 @@ session_start();
           <div>  <!-- Informações do Robô -->   
             <li class="nav-header">Informações do Robô</li>
             <li class="nav-item">
-              <a href="./monitoramento.php" class="nav-link">
+              <a href="#" class="nav-link" id="navItemAtual">
                 <i class="nav-icon fas fa-info-circle pr-2"></i>
                 <p>Monitoramento</p>
               </a>
@@ -177,6 +185,70 @@ session_start();
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+
+        <!-- Robô ATIVO e DENTO do horário de negociação -->
+        <!-- <div class="row d-flex justify-content-center">
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: lime;">
+                <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
+                Robô ativo.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: lime;">
+                <h5><i class="fas fa-info pr-2"></i> Status das Negociações</h5>
+                Dentro do horário de negociações.
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Robô ATIVO e FORA do horário de negociação -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: lime;">
+                <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
+                Robô ativo.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: red;">
+                <h5><i class="fas fa-info pr-2"></i> Status das Negociações</h5>
+                Fora do horário de negociações.
+                </div>
+            </div>
+        </div>
+
+        <!-- Robô INATIVO e DENTRO do horário de negociação -->
+        <!-- <div class="row d-flex justify-content-center">
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: red;">
+                <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
+                Robô Inativo.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: #ff9c00;">
+                <h5><i class="fas fa-info pr-2"></i> Status das Negociações</h5>
+                Dentro do horário de negociações.
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Robô INATIVO e FORA do horário de negociação -->
+        <!-- <div class="row d-flex justify-content-center">
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: red;">
+                <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
+                Robô Inativo.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="callout callout-info" style="border-left-color: red;">
+                <h5><i class="fas fa-info pr-2"></i> Status das Negociações</h5>
+                Fora do horário de negociações.
+                </div>
+            </div>
+        </div> -->
 
       </div><!-- /.container-fluid -->
     </div>
