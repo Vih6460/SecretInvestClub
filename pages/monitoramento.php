@@ -187,7 +187,7 @@ session_start();
       <div class="container-fluid">
 
         <!-- Robô ATIVO e DENTO do horário de negociação -->
-        <div class="row d-flex justify-content-center">
+        <!-- <div class="row d-flex justify-content-center">
             <div class="col-sm-6">
                 <div class="callout callout-info" style="border-left-color: lime;">
                 <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
@@ -200,10 +200,10 @@ session_start();
                 Dentro do horário de negociações.
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Robô ATIVO e FORA do horário de negociação -->
-        <!-- <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
             <div class="col-sm-6">
                 <div class="callout callout-info" style="border-left-color: lime;">
                 <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
@@ -216,7 +216,7 @@ session_start();
                 Fora do horário de negociações.
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Robô INATIVO e DENTRO do horário de negociação -->
         <!-- <div class="row d-flex justify-content-center">
@@ -263,6 +263,20 @@ session_start();
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+            <div class="row d-flex justify-content-center">
+              <div class="col-sm-6">
+                  <div class="callout callout-info" style="border-top: 5px solid lime; border-left: none;">
+                  <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
+                  Robô ativo.
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="callout callout-info" style="border-top: 5px solid red; border-left: none;">
+                  <h5><i class="fas fa-info pr-2"></i> Status das Negociações</h5>
+                  Fora do horário de negociações.
+                  </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-12">
                 <h5 style="font-weight: 600;">Status: &ensp; <span style="font-weight: normal">Não Posicionado</span></h5>
@@ -336,7 +350,7 @@ session_start();
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <div class="row ">
+            <div class="row">
               <div class="col-12">
                 <h5 style="font-weight: 600;">Status: &ensp; <span style="font-weight: normal">Posicionado</span></h5>
               </div>
