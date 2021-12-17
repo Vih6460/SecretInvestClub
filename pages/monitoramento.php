@@ -187,7 +187,7 @@ session_start();
       <div class="container-fluid">
 
         <!-- Robô ATIVO e DENTO do horário de negociação -->
-        <!-- <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
             <div class="col-sm-6">
                 <div class="callout callout-info" style="border-left-color: lime;">
                 <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
@@ -200,10 +200,10 @@ session_start();
                 Dentro do horário de negociações.
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Robô ATIVO e FORA do horário de negociação -->
-        <div class="row d-flex justify-content-center">
+        <!-- <div class="row d-flex justify-content-center">
             <div class="col-sm-6">
                 <div class="callout callout-info" style="border-left-color: lime;">
                 <h5><i class="fas fa-info pr-2"></i> Status do Robô</h5>
@@ -216,7 +216,7 @@ session_start();
                 Fora do horário de negociações.
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Robô INATIVO e DENTRO do horário de negociação -->
         <!-- <div class="row d-flex justify-content-center">
@@ -249,6 +249,153 @@ session_start();
                 </div>
             </div>
         </div> -->
+
+        <!-- ================================================================================================================ -->
+
+        <!-- Card Informações dos Robôs -->
+        <div class="card card-gray" style="border-left: 5px solid lime;">
+          <div class="card-header" >
+            <h3 class="card-title">Posição do Robô</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row ">
+              <div class="col-sm-4">
+                <h4>Robô: &ensp; <span>K9_WIN_3_1</span></h4>
+              </div>
+              <div class="col-sm-4">
+                <h4>Status: &ensp; <span>Posicionado</span></h4>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Ativo: &ensp;<span style="font-weight: normal">WING22</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Contratos: &ensp;<span style="font-weight: normal">10 cts.</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Preço Médio: &ensp;<span style="font-weight: normal">108335 pts.</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Gain: &ensp;<span style="font-weight: normal">108535 pts.</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Loss: &ensp;<span style="font-weight: normal">108135 pts.</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Nível: &ensp;<span style="font-weight: normal">2</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Níveis Obtidos: &ensp;<span style="font-weight: normal">N N N R</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Pontos na Entrada: &ensp;<span style="font-weight: normal">1050</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Zona: &ensp;<span style="font-weight: normal">C MAX X</span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /Card Informações dos Robôs-->
+
+
+        <!-- Card Informações dos Robôs -->
+        <div class="card card-gray" style="border-left: 5px solid red;">
+          <div class="card-header" >
+            <h3 class="card-title">Posição do Robô</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row ">
+              <div class="col-sm-4">
+                <h4>Robô: &ensp; <span>K9_WDO_3_1</span></h4>
+              </div>
+              <div class="col-sm-4">
+                <h4>Status: &ensp; <span>Não Posicionado</span></h4>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Ativo: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Contratos: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Preço Médio: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Gain: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Loss: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Nível: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Níveis Obtidos: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Pontos na Entrada: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <h5 style="font-weight: 600;">Zona: &ensp;<span style="font-weight: normal">---</span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /Card Informações dos Robôs-->
+
+
 
       </div><!-- /.container-fluid -->
     </div>
