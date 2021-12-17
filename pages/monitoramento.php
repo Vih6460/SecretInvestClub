@@ -255,7 +255,7 @@ session_start();
         <!-- Card Informações dos Robôs -->
         <div class="card card-gray" style="border-left: 5px solid red;">
           <div class="card-header" >
-            <h3 class="card-title" style="font-size: 1.5rem;">K9_WDO_3_1</h3>
+            <h2 class="card-title" style="font-size: 1.5rem;">K9_WDO_3_1</h2>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
               </button>
@@ -328,7 +328,7 @@ session_start();
         <!-- Card Informações dos Robôs -->
         <div class="card card-gray" style="border-left: 5px solid lime;">
           <div class="card-header" >
-            <h3 class="card-title" style="font-size: 1.5rem;">K9_WIN_3_1</h3>
+            <h2 class="card-title" style="font-size: 1.5rem;">K9_WIN_3_1</h2>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
               </button>
