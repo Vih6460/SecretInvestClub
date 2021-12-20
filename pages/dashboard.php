@@ -337,12 +337,9 @@ session_start();
         item.classList.remove("textoProibido");
         item.classList.add("textoLiberado");
       })
-
     }
 
   }
-
-
 </script>
 
 </body>
