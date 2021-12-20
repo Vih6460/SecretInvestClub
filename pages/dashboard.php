@@ -37,13 +37,15 @@ session_start();
     }
 
     .textoLiberado{
-      background-color: none!important;
-      border-radius: none!important;
+      background-color: none;
+      color: #fff;
+      border-radius: none;
     }
 
     .textoProibido{
-      background-color: white!important;
-      border-radius: 5px!important;
+      background: rgba(255, 255, 255, 0.5);
+      color: transparent;
+      border-radius: 5px;
     }
 
   </style>
