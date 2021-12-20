@@ -35,6 +35,17 @@ session_start();
     #nome_empresa_sidebar:hover{
       color: rgba(255,255,255,.8);
     }
+
+    .textoLiberado{
+      background-color: none!important;
+      border-radius: none!important;
+    }
+
+    .textoProibido{
+      background-color: white!important;
+      border-radius: 5px!important;
+    }
+
   </style>
 
 </head>
@@ -54,6 +65,10 @@ session_start();
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-none" role="button" id="btn-eye-open" onclick="esconderMostrar()"><i class="far fa-eye"></i></a>
+        <a class="nav-link" role="button" id="btn-eye-closed" onclick="esconderMostrar()"><i class="far fa-eye-slash"></i></a>
       </li>
     </ul>
 
@@ -178,6 +193,50 @@ session_start();
     <div class="content-header">
       <div class="container-fluid">
 
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Carlos</h3>
+                <p class="mb-0">K9_WDO_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 20.000,00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Feu</h3>
+                <p class="mb-0">K9_WDO_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 10.000,00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #ff0018bf!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Carlos</h3>
+                <p class="mb-0">K9_WIN_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 3.000,00</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: green!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Feu</h3>
+                <p class="mb-0">K9_WIN_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 1.000,00</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -199,11 +258,27 @@ session_start();
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
+  <div class="modal fade" id="modal-secondary">
+    <div class="modal-dialog">
+      <div class="modal-content bg-secondary">
+        <div class="modal-header">
+          <h4 class="modal-title">Secondary Modal</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-light">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
   <!-- Main Footer -->
   <footer class="main-footer">
@@ -239,5 +314,36 @@ session_start();
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard2.js"></script>
+
+<script>
+  function esconderMostrar(){
+
+    if(document.querySelector("#btn-eye-open").classList.contains("d-none")){
+      // Vai esconder
+      document.querySelector("#btn-eye-closed").classList.add("d-none");
+      document.querySelector("#btn-eye-open").classList.remove("d-none");
+
+      document.querySelectorAll(".textoTeste").forEach(function(item){
+        item.classList.remove("textoLiberado");
+        item.classList.add("textoProibido");
+      })
+
+    } else {
+      // Vai mostrar
+      document.querySelector("#btn-eye-open").classList.add("d-none");
+      document.querySelector("#btn-eye-closed").classList.remove("d-none");
+
+      document.querySelectorAll(".textoTeste").forEach(function(item){
+        item.classList.remove("textoProibido");
+        item.classList.add("textoLiberado");
+      })
+
+    }
+
+  }
+
+
+</script>
+
 </body>
 </html>
