@@ -69,6 +69,9 @@ session_start();
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" role="button" data-toggle="modal" data-target="#modal-filtro"><i class="fas fa-filter"></i></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link d-none" role="button" id="btn-eye-open" onclick="esconderMostrar()"><i class="far fa-eye"></i></a>
         <a class="nav-link" role="button" id="btn-eye-closed" onclick="esconderMostrar()"><i class="far fa-eye-slash"></i></a>
       </li>
@@ -196,43 +199,165 @@ session_start();
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-xl-2 col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
               <div class="inner">
                 <h3>Carlos</h3>
                 <p class="mb-0">K9_WDO_3_1</p>
                 <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 20.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WDOF22</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">10</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">5756.5</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">5760.5</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">5751.5</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MAX X</span></p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-xl-2 col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
               <div class="inner">
-                <h3>Feu</h3>
+                <h3>Vinicius</h3>
                 <p class="mb-0">K9_WDO_3_1</p>
                 <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 10.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-xl-2 col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info" style="background-color: #ff0018bf!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
               <div class="inner">
                 <h3>Carlos</h3>
                 <p class="mb-0">K9_WIN_3_1</p>
                 <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 3.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WING22</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">50</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">106200</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">106000</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">106400</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MIN Y</span></p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-xl-2 col-lg-3 col-6">
             <!-- small card -->
             <div class="small-box bg-info" style="background-color: green!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
               <div class="inner">
                 <h3>Feu</h3>
                 <p class="mb-0">K9_WIN_3_1</p>
                 <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 1.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #ff0018bf!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Julio</h3>
+                <p class="mb-0">K9_WIN_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 3.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WING22</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">50</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">106200</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">106000</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">106400</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MIN Y</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Bruno</h3>
+                <p class="mb-0">K9_WDO_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 20.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WDOF22</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">10</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">5756.5</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">5760.5</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">5751.5</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MAX X</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: green!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Marcelo</h3>
+                <p class="mb-0">K9_WIN_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 1.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+              <div class="inner">
+                <h3>Willian</h3>
+                <p class="mb-0">K9_WDO_3_1</p>
+                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 10.000,00</span></p>
+                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
+                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
+                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
               </div>
             </div>
           </div>
@@ -261,7 +386,7 @@ session_start();
   <!-- /.content-wrapper -->
 
   <div class="modal fade" id="modal-secondary">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-secondary">
         <div class="modal-header">
           <h4 class="modal-title">Secondary Modal</h4>
@@ -275,6 +400,37 @@ session_start();
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-outline-light">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
+  <div class="modal fade" id="modal-filtro">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-secondary">
+        <div class="modal-header" style="border-color: black;">
+          <h4 class="modal-title">Filtro de Dados</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- select -->
+          <div class="form-group">
+            <label>Valor Acumulado</label>
+            <select class="form-control">
+              <option>Diário</option>
+              <option>Semanal</option>
+              <option>Mensal</option>
+              <option>Desde o Início</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between" style="border-color: black;">
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal" style="border-color: black;">Fechar</button>
+          <button type="button" class="btn btn-outline-light" style="border-color: black;">Aplicar</button>
         </div>
       </div>
       <!-- /.modal-content -->
