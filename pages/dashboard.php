@@ -46,13 +46,14 @@ session_start();
       background: rgba(255, 255, 255, 0.5);
       color: transparent;
       border-radius: 5px;
+      text-shadow: none;
     }
 
   </style>
 
 </head>
 <!-- <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"> -->
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed">
+<body class="hold-transition dark-mode sidebar-mini sidebar-collapse layout-fixed layout-navbar-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -93,7 +94,7 @@ session_start();
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4 collapsed">
 
     <!-- Brand Logo -->
     <a class="brand-link" id="nome_empresa_sidebar">
@@ -192,177 +193,160 @@ session_start();
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-color: rgb(25 25 25);">
 
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
 
+
         <div class="row">
-          <div class="col-xl-2 col-lg-3 col-6">
+        <!-- <div class="row" style="text-shadow: 0px 0px 5px rgb(0 0 0);"> -->
+          <div class="col-12">
             <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
+            <!-- <div class="small-box bg-info shadow" style="background-color: #1aef00!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary"> -->
+            <div class="small-box bg-info shadow" style="background-color: #343a40!important; border: 3px solid white;">
               <div class="inner">
-                <h3>Carlos</h3>
-                <p class="mb-0">K9_WDO_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 20.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WDOF22</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">10</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">5756.5</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">5760.5</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">5751.5</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MAX X</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Vinicius</h3>
-                <p class="mb-0">K9_WDO_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 10.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #ff0018bf!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Carlos</h3>
-                <p class="mb-0">K9_WIN_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 3.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WING22</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">50</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">106200</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">106000</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">106400</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MIN Y</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: green!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Feu</h3>
-                <p class="mb-0">K9_WIN_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 1.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
+                <h4 class="mb-1 pl-3 pr-3 d-flex justify-content-between align-items-center">Acumulado Geral:<span class="textoTeste textoLiberado" style="font-size: 2rem;">R$ 100.000,00</span></h4>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #ff0018bf!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Julio</h3>
-                <p class="mb-0">K9_WIN_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 3.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WING22</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">50</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">106200</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">106000</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">106400</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MIN Y</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Bruno</h3>
-                <p class="mb-0">K9_WDO_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 20.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">WDOF22</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">10</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">5756.5</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">5760.5</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">5751.5</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">1</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">N N R</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">70</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">C MAX X</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: green!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Marcelo</h3>
-                <p class="mb-0">K9_WIN_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 1.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-6">
-            <!-- small card -->
-            <div class="small-box bg-info" style="background-color: #343a40!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary">
-              <div class="inner">
-                <h3>Willian</h3>
-                <p class="mb-0">K9_WDO_3_1</p>
-                <p class="mb-1">Acumulado = <span class="textoTeste textoLiberado">R$ 10.000,00</span></p>
-                <p class="mb-1">Status = <span class="textoTeste textoLiberado">Não Posicionado</span></p>
-                <p class="mb-1">Ativo = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Contratos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">PM = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Gain = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Loss = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Nível = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Níveis Obtidos = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Pontos na Entrada = <span class="textoTeste textoLiberado">---</span></p>
-                <p class="mb-1">Zona = <span class="textoTeste textoLiberado">---</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
         
+
+        <div class="row">
+          <div class="col-xxl-2 col-lg-3 col-6">
+            <div class="card card-gray">
+              <div class="card-header" style="background-color: green;">
+                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Carlos</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
+                    <h3 class="mb-4 textoTeste textoLiberado">5.000,00</h3>
+                  </div>
+                  <!-- <div class="col-6 pt-1 d-flex justify-content-center align-items-start">
+                    <div class="d-flex justify-content-center align-items-center" style="border: 2px solid #6d757d; border-radius: 5px;">
+                      <h1 style="font-size: 2rem; color: #6d757d;">&ensp;&ensp;R$&ensp;&ensp;</h1>
+                    </div>
+                  </div> -->
+                  <div class="col-6">
+                    <!-- <h5 class="mb-0" style="color: #6d757d">&ensp;</h5> -->
+                    <div class="d-flex mt-2 justify-content-center align-items-center" style="border: 2px solid #6d757d; border-radius: 5px;">
+                      <h1 style="font-size: 2rem; color: #6d757d;">&ensp;&ensp;R$&ensp;&ensp;</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">15.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">100.000,00</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+
+          <div class="col-xxl-2 col-lg-3 col-6">
+            <div class="card card-gray">
+              <div class="card-header">
+                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">César</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
+                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+
+          <div class="col-xxl-2 col-lg-3 col-6">
+            <div class="card card-gray" >
+              <div class="card-header" style="background-color: #bb0000;">
+                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Antonio</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
+                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+
+          <div class="col-xxl-2 col-lg-3 col-6">
+            <div class="card card-gray">
+              <div class="card-header" style="background-color: #b7b700;">
+                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Vitor</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
+                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+        </div>
 
       </div><!-- /.container-fluid -->
     </div>
