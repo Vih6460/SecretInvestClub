@@ -435,6 +435,26 @@ session_start();
     <!-- /.modal-dialog -->
   </div>
 
+  <div class="modal fade" id="modal-senha-mostrar-dados">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content bg-secondary" style="border-radius: 30px; width: auto;">
+        <div class="modal-header d-flex justify-content-center" style="border: none;">
+          <h5 class="modal-title">Senha dos dados protegidos!</h5>
+          </button>
+        </div>
+        <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
+          <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none;">
+        </div>
+        <div class="modal-footer justify-content-between" style="border: none;">
+          <button type="button" class="btn btn-outline-light" style="border-radius: 12px;" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-outline-light" style="border-radius: 12px;" id="btn_mostrar_dados">Confirmar</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
 
   <!-- Main Footer -->
   <footer class="main-footer">
@@ -494,6 +514,18 @@ session_start();
 
     } else {
       // Vai mostrar
+      $('#modal-senha-mostrar-dados').modal('show'); 
+      // document.getElementById('senha_mostrar_dados').focus({preventScroll:false});
+   }
+
+  }
+</script>
+
+<script>
+  $("#btn_mostrar_dados").click(function(){
+    let senha = document.querySelector("#senha_mostrar_dados").value;
+    
+    if (senha=="123") {
       document.querySelector("#btn-eye-open").classList.add("d-none");
       document.querySelector("#btn-eye-closed").classList.remove("d-none");
 
@@ -506,9 +538,15 @@ session_start();
         item.classList.remove("d-none");
         item.classList.add("d-flex");
       })
+    } else {
+      alert("Senha incorreta!");
     }
 
-  }
+    document.querySelector("#senha_mostrar_dados").value = "";
+    $('#modal-senha-mostrar-dados').modal('hide'); 
+  });
+
+
 </script>
 
 </body>
