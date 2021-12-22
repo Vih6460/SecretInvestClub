@@ -70,9 +70,6 @@ session_start();
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" role="button" data-toggle="modal" data-target="#modal-filtro"><i class="fas fa-filter"></i></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link d-none" role="button" id="btn-eye-open" onclick="esconderMostrar()"><i class="far fa-eye"></i></a>
         <a class="nav-link" role="button" id="btn-eye-closed" onclick="esconderMostrar()"><i class="far fa-eye-slash"></i></a>
       </li>
@@ -196,7 +193,7 @@ session_start();
   <div class="content-wrapper" style="background-color: rgb(25 25 25);">
 
     <!-- Content Header (Page header) -->
-    <div class="content-header">
+    <div class="content-header pb-0">
       <div class="container-fluid">
 
 
@@ -212,16 +209,27 @@ session_start();
             </div>
           </div>
         </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
 
 
-        
 
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Main row -->
         <div class="row">
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
               <div class="card-header" style="background-color: green;">
-                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Carlos</h3>
+                <div>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Carlos</h3>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
+                </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -230,26 +238,19 @@ session_start();
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
                     <h3 class="mb-4 textoTeste textoLiberado">5.000,00</h3>
                   </div>
-                  <!-- <div class="col-6 pt-1 d-flex justify-content-center align-items-start">
-                    <div class="d-flex justify-content-center align-items-center" style="border: 2px solid #6d757d; border-radius: 5px;">
-                      <h1 style="font-size: 2rem; color: #6d757d;">&ensp;&ensp;R$&ensp;&ensp;</h1>
-                    </div>
-                  </div> -->
-                  <div class="col-6">
-                    <!-- <h5 class="mb-0" style="color: #6d757d">&ensp;</h5> -->
-                    <div class="d-flex mt-2 justify-content-center align-items-center" style="border: 2px solid #6d757d; border-radius: 5px;">
-                      <h1 style="font-size: 2rem; color: #6d757d;">&ensp;&ensp;R$&ensp;&ensp;</h1>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
                     <h3 class="textoTeste textoLiberado">15.000,00</h3>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
                     <h3 class="textoTeste textoLiberado">100.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
+                    <h3 class="textoTeste textoLiberado">125.000,00</h3>
                   </div>
                 </div>
               </div>
@@ -259,8 +260,13 @@ session_start();
 
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
-              <div class="card-header">
-                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">César</h3>
+            <div class="card-header">
+                <div>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">César</h3>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
+                </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -289,8 +295,13 @@ session_start();
 
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray" >
-              <div class="card-header" style="background-color: #bb0000;">
-                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Antonio</h3>
+              <div class="card-header" style="background-color: #bb0000;;">
+                <div>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Willian</h3>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
+                </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -319,8 +330,13 @@ session_start();
 
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
-              <div class="card-header" style="background-color: #b7b700;">
-                <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Vitor</h3>
+              <div class="card-header" style="background-color: #b7b700;;">
+                <div>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Vitor</h3>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
+                </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -346,21 +362,6 @@ session_start();
               <!-- /.card-body -->
             </div>
           </div>
-        </div>
-
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-
-
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Main row -->
-        <div class="row">
-
         </div>
         <!-- /.row -->
       </div><!--/. container-fluid -->
@@ -391,36 +392,6 @@ session_start();
     <!-- /.modal-dialog -->
   </div>
 
-  <div class="modal fade" id="modal-filtro">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-secondary">
-        <div class="modal-header" style="border-color: black;">
-          <h4 class="modal-title">Filtro de Dados</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- select -->
-          <div class="form-group">
-            <label>Valor Acumulado</label>
-            <select class="form-control">
-              <option>Diário</option>
-              <option>Semanal</option>
-              <option>Mensal</option>
-              <option>Desde o Início</option>
-            </select>
-          </div>
-        </div>
-        <div class="modal-footer justify-content-between" style="border-color: black;">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal" style="border-color: black;">Fechar</button>
-          <button type="button" class="btn btn-outline-light" style="border-color: black;">Aplicar</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
 
   <!-- Main Footer -->
   <footer class="main-footer">
