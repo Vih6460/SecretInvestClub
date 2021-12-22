@@ -195,19 +195,36 @@ session_start();
     <!-- Content Header (Page header) -->
     <div class="content-header pb-0">
       <div class="container-fluid">
+        <div class="row" style="">
 
-
-        <div class="row">
-        <!-- <div class="row" style="text-shadow: 0px 0px 5px rgb(0 0 0);"> -->
           <div class="col-12">
-            <!-- small card -->
-            <!-- <div class="small-box bg-info shadow" style="background-color: #1aef00!important; cursor: pointer;" data-toggle="modal" data-target="#modal-secondary"> -->
-            <div class="small-box bg-info shadow" style="background-color: #343a40!important; border: 3px solid white;">
-              <div class="inner">
-                <h4 class="mb-1 pl-3 pr-3 d-flex justify-content-between align-items-center">Acumulado Geral:<span class="textoTeste textoLiberado" style="font-size: 2rem;">R$ 100.000,00</span></h4>
+            <div class="small-box bg-info shadow" style="background-color: #343a40!important; border: 2px solid white;">
+              <div class="inner d-flex justify-content-between" style="padding: 5px;">
+                <div class="d-flex align-items-center">
+                  <h4 class="mb-1 pl-3 pr-3 d-flex justify-content-start align-items-center">Acumulado Geral</h4>
+                </div>
+                <div class="d-flex">
+                  <div class="d-flex justify-content-start" style="flex-direction: column;">
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">DIÁRIO</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 13.500,00</span></h4>
+                  </div>
+                  <div class="d-flex justify-content-start" style="flex-direction: column;">
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">SEMANAL</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 31.800,00</span></h4>
+                  </div>
+                  <div class="d-flex justify-content-start" style="flex-direction: column;">
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">MENSAL</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 142.100,00</span></h4>
+                  </div>
+                  <div class="d-flex justify-content-start" style="flex-direction: column;">
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">TOTAL</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 181.000,00</span></h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div><!-- /.container-fluid -->
     </div>
@@ -225,7 +242,7 @@ session_start();
             <div class="card card-gray">
               <div class="card-header" style="background-color: green;">
                 <div>
-                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Carlos</h3>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Carlos</h3>
                 </div>
                 <div class="d-flex justify-content-end">
                   <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
@@ -262,7 +279,7 @@ session_start();
             <div class="card card-gray">
             <div class="card-header">
                 <div>
-                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">César</h3>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">César</h3>
                 </div>
                 <div class="d-flex justify-content-end">
                   <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
@@ -276,16 +293,18 @@ session_start();
                     <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
                   </div>
                   <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
-                  </div>
-                  <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
                     <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
+                    <h3 class="textoTeste textoLiberado">12.000,00</h3>
                   </div>
                 </div>
               </div>
@@ -297,7 +316,7 @@ session_start();
             <div class="card card-gray" >
               <div class="card-header" style="background-color: #bb0000;;">
                 <div>
-                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Willian</h3>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Willian</h3>
                 </div>
                 <div class="d-flex justify-content-end">
                   <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
@@ -308,19 +327,21 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                    <h3 class="mb-4 textoTeste textoLiberado">7.000,00</h3>
                   </div>
                   <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">12.000,00</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">30.000,00</h3>
                   </div>
                   <div class="col-6">
-                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                    <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
+                    <h3 class="textoTeste textoLiberado">40.000,00</h3>
                   </div>
                 </div>
               </div>
@@ -332,7 +353,7 @@ session_start();
             <div class="card card-gray">
               <div class="card-header" style="background-color: #b7b700;;">
                 <div>
-                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 2px 2px 2px black;">Vitor</h3>
+                  <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Marcos Vinicius</h3>
                 </div>
                 <div class="d-flex justify-content-end">
                   <img src="../src/img/real2.png" alt="Símbolo real" height="38" width="auto">
@@ -343,19 +364,21 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                    <h3 class="mb-4 textoTeste textoLiberado">500,00</h3>
                   </div>
                   <div class="col-6">
+                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
+                    <h3 class="textoTeste textoLiberado">800,00</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
+                    <h3 class="textoTeste textoLiberado">2.100,00</h3>
                   </div>
                   <div class="col-6">
-                    <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                    <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
+                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
                   </div>
                 </div>
               </div>
