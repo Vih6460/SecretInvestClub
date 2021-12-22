@@ -43,8 +43,8 @@ session_start();
     }
 
     .textoProibido{
-      background: rgba(255, 255, 255, 0.5);
-      color: transparent;
+      background: rgba(107, 115, 123, 1);
+      color: #343a40;
       border-radius: 5px;
       text-shadow: none;
     }
@@ -206,19 +206,23 @@ session_start();
                 <div class="d-flex">
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">DIÁRIO</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 13.500,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 13.500,00</span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">SEMANAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 31.800,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 31.800,00</span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">MENSAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 142.100,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 142.100,00</span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">TOTAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoTeste textoLiberado" style="font-size: 1.9rem;">R$ 181.000,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 181.000,00</span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                 </div>
               </div>
@@ -253,21 +257,25 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">5.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoLiberado">5.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">15.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoLiberado">15.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">100.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">100.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoTeste textoLiberado">125.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">125.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -290,21 +298,25 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">1.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoLiberado">1.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">4.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">10.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">10.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoTeste textoLiberado">12.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">12.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -327,21 +339,25 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">7.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoLiberado">7.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">12.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">12.000,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">30.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">30.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoTeste textoLiberado">40.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">40.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -364,21 +380,25 @@ session_start();
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoTeste textoLiberado">500,00</h3>
+                    <h3 class="mb-4 textoProtegido textoLiberado">500,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoTeste textoLiberado">800,00</h3>
+                    <h3 class="textoProtegido textoLiberado">800,00</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoTeste textoLiberado">2.100,00</h3>
+                    <h3 class="textoProtegido textoLiberado">2.100,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoTeste textoLiberado">4.000,00</h3>
+                    <h3 class="textoProtegido textoLiberado">4.000,00</h3>
+                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -459,19 +479,32 @@ session_start();
       document.querySelector("#btn-eye-closed").classList.add("d-none");
       document.querySelector("#btn-eye-open").classList.remove("d-none");
 
-      document.querySelectorAll(".textoTeste").forEach(function(item){
-        item.classList.remove("textoLiberado");
-        item.classList.add("textoProibido");
+      document.querySelectorAll(".textoLiberado").forEach(function(item){
+        item.classList.remove("d-flex");
+        item.classList.add("d-none");
       })
+
+      document.querySelectorAll(".textoProibido").forEach(function(item){
+        item.classList.remove("d-none");
+        item.classList.add("d-flex");
+        item.classList.add("d-flex");
+        item.classList.add("align-items-center");
+      })
+
 
     } else {
       // Vai mostrar
       document.querySelector("#btn-eye-open").classList.add("d-none");
       document.querySelector("#btn-eye-closed").classList.remove("d-none");
 
-      document.querySelectorAll(".textoTeste").forEach(function(item){
-        item.classList.remove("textoProibido");
-        item.classList.add("textoLiberado");
+      document.querySelectorAll(".textoProibido").forEach(function(item){
+        item.classList.remove("d-flex");
+        item.classList.add("d-none");
+      })
+
+      document.querySelectorAll(".textoLiberado").forEach(function(item){
+        item.classList.remove("d-none");
+        item.classList.add("d-flex");
       })
     }
 
