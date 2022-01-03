@@ -514,27 +514,41 @@ session_start();
 </script>
 
 <script>
+  function senhaCerta() {
+    document.querySelector("#btn-eye-open").classList.add("d-none");
+    document.querySelector("#btn-eye-closed").classList.remove("d-none");
+
+    document.querySelectorAll(".textoProibido").forEach(function(item){
+      item.classList.remove("d-flex");
+      item.classList.add("d-none");
+    })
+
+    document.querySelectorAll(".textoLiberado").forEach(function(item){
+      item.classList.remove("d-none");
+      item.classList.add("d-flex");
+    })
+  } 
+  
+  function senhaErrada() {
+    //Senha errada
+    $('#modal-senha-mostrar-dados-errada').modal('show'); 
+    setTimeout(function() { $('#modal-senha-mostrar-dados-errada').modal('hide'); }, 2500);
+  }
+
   $("#btn_mostrar_dados").click(function(){
     let senha = document.querySelector("#senha_mostrar_dados").value;
-    
-    if (senha=="123") {
-      document.querySelector("#btn-eye-open").classList.add("d-none");
-      document.querySelector("#btn-eye-closed").classList.remove("d-none");
 
-      document.querySelectorAll(".textoProibido").forEach(function(item){
-        item.classList.remove("d-flex");
-        item.classList.add("d-none");
-      })
+    $.ajax({
+      method: "POST",
+      data: {password: senha, conta: <?php echo $_SESSION['conta'] ?>},
+      url: "../src/backend/senhaOlho.php"
+    }).then(
+      function(e){
+        ($sucesso = $.parseJSON(e).sucesso),
 
-      document.querySelectorAll(".textoLiberado").forEach(function(item){
-        item.classList.remove("d-none");
-        item.classList.add("d-flex");
-      })
-    } else {
-      //Senha errada
-      $('#modal-senha-mostrar-dados-errada').modal('show'); 
-      setTimeout(function() { $('#modal-senha-mostrar-dados-errada').modal('hide'); }, 2500);
-    }
+        $sucesso ? (senhaCerta()) : (senhaErrada());  
+      }
+    );
 
     document.querySelector("#senha_mostrar_dados").value = "";
     $('#modal-senha-mostrar-dados').modal('hide'); 
