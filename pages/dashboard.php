@@ -413,21 +413,20 @@ session_start();
   </div>
   <!-- /.content-wrapper -->
 
-  <div class="modal fade" id="modal-secondary">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-secondary">
-        <div class="modal-header">
-          <h4 class="modal-title">Secondary Modal</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+  <div class="modal fade" id="modal-senha-mostrar-dados">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content bg-secondary" style="border-radius: 30px; width: auto;">
+        <div class="modal-header d-flex justify-content-center" style="border: none;">
+          <!-- <h5 class="modal-title">Insira sua Senha</h5> -->
+          <h5 class="modal-title pr-5 pl-5">Insira sua Senha</h5>
           </button>
         </div>
-        <div class="modal-body">
-          <p>One fine body&hellip;</p>
+        <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
+          <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none; width: 80%;">
         </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-light">Save changes</button>
+        <div class="modal-footer justify-content-around" style="border: none;">
+          <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" id="btn_mostrar_dados">Confirmar</button>
         </div>
       </div>
       <!-- /.modal-content -->
@@ -435,25 +434,19 @@ session_start();
     <!-- /.modal-dialog -->
   </div>
 
-  <div class="modal fade" id="modal-senha-mostrar-dados">
+  <div class="modal fade" id="modal-senha-mostrar-dados-errada">
     <div class="modal-dialog d-flex justify-content-center">
       <div class="modal-content bg-secondary" style="border-radius: 30px; width: auto;">
-        <div class="modal-header d-flex justify-content-center" style="border: none;">
-          <h5 class="modal-title">Senha dos dados protegidos!</h5>
-          </button>
-        </div>
-        <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
-          <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none;">
-        </div>
-        <div class="modal-footer justify-content-between" style="border: none;">
-          <button type="button" class="btn btn-outline-light" style="border-radius: 12px;" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-outline-light" style="border-radius: 12px;" id="btn_mostrar_dados">Confirmar</button>
+        <div class="modal-body d-flex justify-content-center align-items-center" style="flex-direction: column;">
+          <i class="fas fa-times" style="color: red; font-size: 3rem;"></i>
+          <h4>Senha incorreta!</h4>
         </div>
       </div>
       <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
   </div>
+
 
 
   <!-- Main Footer -->
@@ -507,7 +500,6 @@ session_start();
       document.querySelectorAll(".textoProibido").forEach(function(item){
         item.classList.remove("d-none");
         item.classList.add("d-flex");
-        item.classList.add("d-flex");
         item.classList.add("align-items-center");
       })
 
@@ -539,7 +531,9 @@ session_start();
         item.classList.add("d-flex");
       })
     } else {
-      alert("Senha incorreta!");
+      //Senha errada
+      $('#modal-senha-mostrar-dados-errada').modal('show'); 
+      setTimeout(function() { $('#modal-senha-mostrar-dados-errada').modal('hide'); }, 2500);
     }
 
     document.querySelector("#senha_mostrar_dados").value = "";
