@@ -90,8 +90,8 @@ if (!isset($_SESSION['conta'])) {
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link d-none" role="button" id="btn-eye-open" onclick="esconderMostrar()"><i class="far fa-eye"></i></a>
-        <a class="nav-link" role="button" id="btn-eye-closed" onclick="esconderMostrar()"><i class="far fa-eye-slash"></i></a>
+        <a class="nav-link" role="button" id="btn-eye-open" onclick="esconderMostrar()"><i class="far fa-eye"></i></a>
+        <a class="nav-link d-none" role="button" id="btn-eye-closed" onclick="esconderMostrar()"><i class="far fa-eye-slash"></i></a>
       </li>
     </ul>
 
@@ -225,24 +225,24 @@ if (!isset($_SESSION['conta'])) {
                 </div>
                 <div class="d-flex">
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">DIÁRIO</span></h4> 
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralDiario, 2, ',', '.') ?></span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center" style="font-size: 1.5rem; color: #687077;">DIÁRIO</h4> 
+                    <h4 class="mb-0 pl-4 pr-3 d-none align-items-center textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralDiario, 2, ',', '.') ?></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-flex textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">SEMANAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralSemanal, 2, ',', '.') ?></span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center" style="font-size: 1.5rem; color: #687077;">SEMANAL</h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-none align-items-center textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralSemanal, 2, ',', '.') ?></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-flex textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">MENSAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralMensal, 2, ',', '.') ?></span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center" style="font-size: 1.5rem; color: #687077;">MENSAL</h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-none align-items-center textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralMensal, 2, ',', '.') ?></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-flex textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">TOTAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralTotal, 2, ',', '.') ?></span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center" style="font-size: 1.5rem; color: #687077;">TOTAL</h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-none align-items-center textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralTotal, 2, ',', '.') ?></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-flex textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                 </div>
               </div>
@@ -277,25 +277,25 @@ if (!isset($_SESSION['conta'])) {
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoProtegido textoLiberado">5.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoLiberado">5.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="mb-4 textoProtegido textoLiberado">15.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoLiberado">15.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoProtegido textoLiberado">100.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">100.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoProtegido textoLiberado">125.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">125.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -318,25 +318,25 @@ if (!isset($_SESSION['conta'])) {
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoProtegido textoLiberado">1.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoLiberado">1.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoProtegido textoLiberado">4.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">4.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoProtegido textoLiberado">10.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">10.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoProtegido textoLiberado">12.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">12.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -359,25 +359,25 @@ if (!isset($_SESSION['conta'])) {
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoProtegido textoLiberado">7.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoLiberado">7.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoProtegido textoLiberado">12.000,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">12.000,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoProtegido textoLiberado">30.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">30.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoProtegido textoLiberado">40.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">40.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
@@ -400,25 +400,25 @@ if (!isset($_SESSION['conta'])) {
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 textoProtegido textoLiberado">500,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-4 d-none textoProtegido textoLiberado">500,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="textoProtegido textoLiberado">800,00</h3>
-                    <h3 class="mb-4 d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">800,00</h3>
+                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">MENSAL</h5>
-                    <h3 class="textoProtegido textoLiberado">2.100,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">2.100,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">TOTAL</h5>
-                    <h3 class="textoProtegido textoLiberado">4.000,00</h3>
-                    <h3 class="d-none textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="d-none textoProtegido textoLiberado">4.000,00</h3>
+                    <h3 class="textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
               </div>
