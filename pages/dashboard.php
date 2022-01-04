@@ -2,12 +2,32 @@
 
 session_start();
 
-  if (!isset($_SESSION['conta'])) {
-      $_SESSION['erroLoginExpiracao'] = "Sessão expirada, faça login novamente!";
-      //Aqui vai voltar pra tela de login
-      header("Location: http://localhost/SecretInvestClub/index.php");
+if (!isset($_SESSION['conta'])) {
+    $_SESSION['erroLoginExpiracao'] = "Sessão expirada, faça login novamente!";
+    //Aqui vai voltar pra tela de login
+    header("Location: http://localhost/SecretInvestClub/index.php");
 
+} else {
+
+  require("../src/backend/conecta.php");
+
+  $acumuladoGeralTotal = 0;
+  $acumuladoGeralDiario = 0;
+  $acumuladoGeralSemanal = 0;
+  $acumuladoGeralMensal = 0;
+
+  $sql = "SELECT * FROM `tbl_robos_mt5` WHERE `Status` = 'Ativo'";
+  $result = $conn->query($sql);
+  if ($result->num_rows >= 0) {
+    while ($row = $result->fetch_array()) {
+      $acumuladoGeralTotal += $row['AcumuladoTotal'];
+      $acumuladoGeralDiario += $row['AcumuladoDiario'];
+      $acumuladoGeralSemanal += $row['AcumuladoSemanal'];
+      $acumuladoGeralMensal += $row['AcumuladoMensal'];
+
+    }
   }
+}
 
 ?>
 
@@ -205,24 +225,24 @@ session_start();
                 </div>
                 <div class="d-flex">
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">DIÁRIO</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 13.500,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">DIÁRIO</span></h4> 
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralDiario, 2, ',', '.') ?></span></h4>
                     <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">SEMANAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 31.800,00</span></h4>
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralSemanal, 2, ',', '.') ?></span></h4>
                     <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">MENSAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 142.100,00</span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralMensal, 2, ',', '.') ?></span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                   <div class="d-flex justify-content-start" style="flex-direction: column;">
                     <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span style="font-size: 1.5rem; color: #687077;">TOTAL</span></h4>
-                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ 181.000,00</span></h4>
-                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
+                    <h4 class="mb-0 pl-4 pr-3 d-flex align-items-center"><span class="textoProtegido textoLiberado" style="font-size: 1.9rem;">R$ <?php echo number_format($acumuladoGeralTotal, 2, ',', '.') ?></span></h4>
+                    <h4 class="mb-0 ml-4 mr-3 d-none textoProtegido textoProibido" style="font-size: 1.9rem;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h4>                  
                   </div>
                 </div>
               </div>
@@ -244,7 +264,7 @@ session_start();
         <div class="row">
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
-              <div class="card-header" style="background-color: green;">
+              <div class="card-header" style="background-color: green;"> <!-- Verde = Posicionado -->
                 <div>
                   <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Carlos</h3>
                 </div>
@@ -284,7 +304,7 @@ session_start();
           </div>
 
           <div class="col-xxl-2 col-lg-3 col-6">
-            <div class="card card-gray">
+            <div class="card card-gray"> <!-- Cinza = Ativo -->
             <div class="card-header">
                 <div>
                   <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">César</h3>
@@ -326,7 +346,7 @@ session_start();
 
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray" >
-              <div class="card-header" style="background-color: #bb0000;;">
+              <div class="card-header" style="background-color: #bb0000;"> <!-- Vermelho = Último nível -->
                 <div>
                   <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Willian</h3>
                 </div>
@@ -367,7 +387,7 @@ session_start();
 
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
-              <div class="card-header" style="background-color: #b7b700;;">
+              <div class="card-header" style="background-color: #b7b700;;">  <!-- Amarelo = B.O -->
                 <div>
                   <h3 class="card-title" style="font-size: 2rem; text-shadow: 1px 1px 2px black;">Marcos Vinicius</h3>
                 </div>
@@ -417,9 +437,7 @@ session_start();
     <div class="modal-dialog d-flex justify-content-center">
       <div class="modal-content bg-secondary" style="border-radius: 30px; width: auto;">
         <div class="modal-header d-flex justify-content-center" style="border: none;">
-          <!-- <h5 class="modal-title">Insira sua Senha</h5> -->
           <h5 class="modal-title pr-5 pl-5">Insira sua Senha</h5>
-          </button>
         </div>
         <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
           <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none; width: 80%;">
