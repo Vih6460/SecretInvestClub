@@ -298,17 +298,22 @@ if (!isset($_SESSION['conta'])) {
                             </div>
                           </div>
                           <!-- /.card-header -->
-                          <div class='card-body'>
+                          <div class='card-body pt-2 pb-2'>
+                            <div class='row'>
+                              <div class='col-12'>
+                                <h5 class='mb-2 mt-0' style='color: #6d757d'>Robô: ".$rowRobo['Nome']."</h5>
+                              </div>
+                            </div>
                             <div class='row'>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>DIÁRIO</h5>
-                                <h3 class='mb-4 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoDiario'], 2, ',', '.')."</h3>
-                                <h3 class='mb-4 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoDiario'], 2, ',', '.')."</h3>
+                                <h3 class='mb-3 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>SEMANAL</h5>
-                                <h3 class='mb-4 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoSemanal'], 2, ',', '.')."</h3>
-                                <h3 class='mb-4 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoSemanal'], 2, ',', '.')."</h3>
+                                <h3 class='mb-3 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                             </div>
                             <div class='row'>
@@ -347,17 +352,22 @@ if (!isset($_SESSION['conta'])) {
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
+              <div class="card-body pt-2 pb-2">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="mb-2 mt-0" style="color: #6d757d">Robô: K9_WIN_3.1</h5>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">DIÁRIO</h5>
-                    <h3 class="mb-4 d-none textoProtegido textoLiberado">5.000,00</h3>
-                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-3 d-none textoProtegido textoLiberado">5.000,00</h3>
+                    <h3 class="mb-3 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                   <div class="col-6">
                     <h5 class="mb-0" style="color: #6d757d">SEMANAL</h5>
-                    <h3 class="mb-4 d-none textoProtegido textoLiberado">15.000,00</h3>
-                    <h3 class="mb-4 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                    <h3 class="mb-3 d-none textoProtegido textoLiberado">15.000,00</h3>
+                    <h3 class="mb-3 textoProtegido textoProibido" style="max-width: fit-content;">&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                   </div>
                 </div>
                 <div class="row">
