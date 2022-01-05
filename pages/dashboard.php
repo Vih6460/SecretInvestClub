@@ -262,6 +262,52 @@ if (!isset($_SESSION['conta'])) {
       <div class="container-fluid">
         <!-- Main row -->
         <div class="row">
+
+          <?php 
+            echo "
+            <div class='col-xxl-2 col-lg-3 col-6'>
+            <div class='card card-gray'>
+              <div class='card-header' style='background-color: green;'> <!-- Verde = Posicionado -->
+                <div>
+                  <h3 class='card-title' style='font-size: 2rem; text-shadow: 1px 1px 2px black;'>Carlos</h3>
+                </div>
+                <div class='d-flex justify-content-end'>
+                  <img src='../src/img/real2.png' alt='Símbolo real' height='38' width='auto'>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='col-6'>
+                    <h5 class='mb-0' style='color: #6d757d'>DIÁRIO</h5>
+                    <h3 class='mb-4 d-none textoProtegido textoLiberado'>5.000,00</h3>
+                    <h3 class='mb-4 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                  </div>
+                  <div class='col-6'>
+                    <h5 class='mb-0' style='color: #6d757d'>SEMANAL</h5>
+                    <h3 class='mb-4 d-none textoProtegido textoLiberado'>15.000,00</h3>
+                    <h3 class='mb-4 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                  </div>
+                </div>
+                <div class='row'>
+                  <div class='col-6'>
+                    <h5 class='mb-0' style='color: #6d757d'>MENSAL</h5>
+                    <h3 class='d-none textoProtegido textoLiberado'>100.000,00</h3>
+                    <h3 class='textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                  </div>
+                  <div class='col-6'>
+                    <h5 class='mb-0' style='color: #6d757d'>TOTAL</h5>
+                    <h3 class='d-none textoProtegido textoLiberado'>125.000,00</h3>
+                    <h3 class='textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+            "
+          ?>
+
           <div class="col-xxl-2 col-lg-3 col-6">
             <div class="card card-gray">
               <div class="card-header" style="background-color: green;"> <!-- Verde = Posicionado -->
@@ -425,6 +471,8 @@ if (!isset($_SESSION['conta'])) {
               <!-- /.card-body -->
             </div>
           </div>
+
+
         </div>
         <!-- /.row -->
       </div><!--/. container-fluid -->
