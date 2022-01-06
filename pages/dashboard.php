@@ -269,10 +269,15 @@ if (!isset($_SESSION['conta'])) {
             if ($result->num_rows >= 0) {
               while ($rowRobo = $result->fetch_array()) {
 
+                $nomeUsuario = "NC";
+
                 $sql2 = "SELECT * FROM `tbl_usuarios_site` WHERE `Conta` = " . $rowRobo["Conta"];
                 $result2 = $conn->query($sql2);
                 if ($result->num_rows >= 0) {
                   while ($rowUser = $result2->fetch_array()) {
+                    $nomeUsuario = $rowUser['Nome'];
+                  }
+                }
 
                     // Posicionado = green
                     // Ativo(Cinza) = #6c757d
@@ -291,7 +296,7 @@ if (!isset($_SESSION['conta'])) {
                         <div class='card card-gray'>
                           <div class='card-header' style='background-color: ".$color.";'> <!-- Verde = Posicionado -->
                             <div>
-                              <h3 class='card-title' style='font-size: 2rem; text-shadow: 1px 1px 2px black;'>".$rowUser['Nome']."</h3>
+                              <h3 class='card-title' style='font-size: 2rem; text-shadow: 1px 1px 2px black;'>".$nomeUsuario."</h3>
                             </div>
                             <div class='d-flex justify-content-end'>
                               <img src='../src/img/real2.png' alt='Símbolo real' height='38' width='auto'>
@@ -334,8 +339,7 @@ if (!isset($_SESSION['conta'])) {
                       </div>
                     ";
 
-                  }
-                }
+                  
 
               }
             }
