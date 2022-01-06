@@ -267,17 +267,7 @@ if (!isset($_SESSION['conta'])) {
             $sql = "SELECT * FROM `tbl_robos_mt5` WHERE `Status` = 'Ativo'";
             $result = $conn->query($sql);
             if ($result->num_rows >= 0) {
-              while ($rowRobo = $result->fetch_array()) {
-
-                $nomeUsuario = "NC";
-
-                $sql2 = "SELECT * FROM `tbl_usuarios_site` WHERE `Conta` = " . $rowRobo["Conta"];
-                $result2 = $conn->query($sql2);
-                if ($result->num_rows >= 0) {
-                  while ($rowUser = $result2->fetch_array()) {
-                    $nomeUsuario = $rowUser['Nome'];
-                  }
-                }
+              while ($row = $result->fetch_array()) {
 
                     // Posicionado = green
                     // Ativo(Cinza) = #6c757d
@@ -286,9 +276,9 @@ if (!isset($_SESSION['conta'])) {
 
                     $color = "#6c757d"; //Ativo
 
-                    if ($rowRobo['Problemas']){ $color = "#b7b700"; } 
-                    else if ($rowRobo['EstaNoUltimoNivel']){ $color = "#bb0000"; } 
-                    else if ($rowRobo['EstaPosicionado']){ $color = "green"; }
+                    if ($row['Problemas']){ $color = "#b7b700"; } 
+                    else if ($row['EstaNoUltimoNivel']){ $color = "#bb0000"; } 
+                    else if ($row['EstaPosicionado']){ $color = "green"; }
 
 
                     echo "
@@ -296,7 +286,7 @@ if (!isset($_SESSION['conta'])) {
                         <div class='card card-gray'>
                           <div class='card-header' style='background-color: ".$color.";'> <!-- Verde = Posicionado -->
                             <div>
-                              <h3 class='card-title' style='font-size: 2rem; text-shadow: 1px 1px 2px black;'>".$nomeUsuario."</h3>
+                              <h3 class='card-title' style='font-size: 2rem; text-shadow: 1px 1px 2px black;'>".$row['NomeCliente']."</h3>
                             </div>
                             <div class='d-flex justify-content-end'>
                               <img src='../src/img/real2.png' alt='Símbolo real' height='38' width='auto'>
@@ -306,30 +296,30 @@ if (!isset($_SESSION['conta'])) {
                           <div class='card-body pt-2 pb-2'>
                             <div class='row'>
                               <div class='col-12'>
-                                <h5 class='mb-2 mt-0' style='color: #6d757d'>Robô: ".$rowRobo['Nome']."</h5>
+                                <h5 class='mb-2 mt-0' style='color: #6d757d'>Robô: ".$row['NomeRobo']."</h5>
                               </div>
                             </div>
                             <div class='row'>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>DIÁRIO</h5>
-                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoDiario'], 2, ',', '.')."</h3>
+                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($row['AcumuladoDiario'], 2, ',', '.')."</h3>
                                 <h3 class='mb-3 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>SEMANAL</h5>
-                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoSemanal'], 2, ',', '.')."</h3>
+                                <h3 class='mb-3 d-none textoProtegido textoLiberado'>".number_format($row['AcumuladoSemanal'], 2, ',', '.')."</h3>
                                 <h3 class='mb-3 textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                             </div>
                             <div class='row'>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>MENSAL</h5>
-                                <h3 class='d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoMensal'], 2, ',', '.')."</h3>
+                                <h3 class='d-none textoProtegido textoLiberado'>".number_format($row['AcumuladoMensal'], 2, ',', '.')."</h3>
                                 <h3 class='textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                               <div class='col-6'>
                                 <h5 class='mb-0' style='color: #6d757d'>TOTAL</h5>
-                                <h3 class='d-none textoProtegido textoLiberado'>".number_format($rowRobo['AcumuladoTotal'], 2, ',', '.')."</h3>
+                                <h3 class='d-none textoProtegido textoLiberado'>".number_format($row['AcumuladoTotal'], 2, ',', '.')."</h3>
                                 <h3 class='textoProtegido textoProibido' style='max-width: fit-content;'>&lowast;&lowast;&lowast;&lowast;&lowast;&lowast;</h3>
                               </div>
                             </div>
