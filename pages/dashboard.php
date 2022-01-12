@@ -348,13 +348,16 @@ if (!isset($_SESSION['conta'])) {
         <div class="modal-header d-flex justify-content-center" style="border: none;">
           <h5 class="modal-title pr-5 pl-5">Insira sua Senha</h5>
         </div>
-        <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
-          <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none; width: 80%;">
-        </div>
-        <div class="modal-footer justify-content-around" style="border: none;">
-          <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" id="btn_mostrar_dados">Confirmar</button>
-        </div>
+
+          <div class="modal-body p-0 d-flex justify-content-center" style="font-size: 1.3rem;">
+            <input class="mb-0 pl-3" id="senha_mostrar_dados" type="password" style="border-radius: 15px; border: none; width: 80%;">
+          </div>
+          <div class="modal-footer justify-content-around" style="border: none;">
+            <!-- <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" data-dismiss="modal">Cancelar</button> -->
+            <a class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" data-dismiss="modal">Cancelar</a>
+            <button type="button" class="btn btn-outline-light mt-2 mr-0 mb-0 ml-0" style="border-radius: 12px;" id="btn_mostrar_dados">Confirmar</button>
+          </div>
+
       </div>
       <!-- /.modal-content -->
     </div>
@@ -434,13 +437,14 @@ if (!isset($_SESSION['conta'])) {
     } else {
       // Vai mostrar
       $('#modal-senha-mostrar-dados').modal('show'); 
-      // document.getElementById('senha_mostrar_dados').focus({preventScroll:false});
-   }
+      // document.getElementById('senha_mostrar_dados').focus();
+      $('#modal-senha-mostrar-dados').on('shown.bs.modal', function(event) {
+        $("#senha_mostrar_dados").focus();
+      })
+    }
 
   }
-</script>
 
-<script>
   function senhaCerta() {
     document.querySelector("#btn-eye-open").classList.add("d-none");
     document.querySelector("#btn-eye-closed").classList.remove("d-none");
