@@ -14,6 +14,8 @@
   settype($horaAtual, "integer");
   $minutoAtual  = $data->format('i');
   settype($minutoAtual, "integer");
+  $diaAtual     = $data->format('d');
+  settype($diaAtual, "integer");
 
   $tempoAtualEmMinutos = ($horaAtual * 60) + $minutoAtual;
 
@@ -36,8 +38,12 @@
   
   echo '<hr>';
   
-  $horaUltimoHorarioModificado = $ultimoHorarioModificado->format('H');
-  $minutoUltimoHorarioModificado = $ultimoHorarioModificado->format('i');
+  $horaUltimoHorarioModificado    = $ultimoHorarioModificado->format('H');
+  settype($horaUltimoHorarioModificado, "integer");
+  $minutoUltimoHorarioModificado  = $ultimoHorarioModificado->format('i');
+  settype($minutoUltimoHorarioModificado, "integer");
+  $dataUltimoHorarioModificado    = $ultimoHorarioModificado->format('d');
+  settype($dataUltimoHorarioModificado, "integer");
   
   $tempoUltimoHorarioModificadoEmMinutos = ($horaUltimoHorarioModificado * 60) + $minutoUltimoHorarioModificado;
   printf("UltimoHorarioModificado <br> Hora/Minuto: %d/%d --- %d minutos", $horaUltimoHorarioModificado, $minutoUltimoHorarioModificado, $tempoUltimoHorarioModificadoEmMinutos);
@@ -48,7 +54,7 @@
   
   echo '<hr>';
 
-  if($tempoAtualEmMinutos > ($tempoUltimoHorarioModificadoEmMinutos + 35)){
+  if($tempoAtualEmMinutos > ($tempoUltimoHorarioModificadoEmMinutos + 35) || $diaAtual != $dataUltimoHorarioModificado){
     echo 'Robô inativo';
   } else {
     echo 'Robô ativo';
