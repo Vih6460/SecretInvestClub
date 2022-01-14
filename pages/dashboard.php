@@ -25,10 +25,14 @@ if (!isset($_SESSION['conta'])) {
       $acumuladoGeralSemanal += $row['AcumuladoSemanal'];
       $acumuladoGeralMensal += $row['AcumuladoMensal'];
 
+      //Como descobrir se o robô não está ativo
+      //Aqui eu vou colocar que se o robô não estiver posicionado, não estiver no último nível e não estiver com problemas, quando o valor que está em modificado tiver com uma diferença de 1 hora, eu desativo o robo, porém o robo vai ter q ficar mandando sinal de vida (sinal que está ativo a cada 30min)
+      // if($row['Modificado'] < HorarioAtual - 1hora){
+      //   //Aki tem que atualizar o banco dizendo q o robô não esta mais ativo
+      // }
     }
   }
-  //Como descobrir se o robô não está ativo
-  //Aqui eu vou colocar que se o robô não estiver posicionado, não estiver no último nível e não estiver com problemas, quando o valor que está em modificado tiver com uma diferença de 1 hora, eu desativo o robo, porém o robo vai ter q ficar mandando sinal de vida (sinal que está ativo a cada 30min)
+
 }
 
 ?>
