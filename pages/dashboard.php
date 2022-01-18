@@ -10,26 +10,78 @@ if (!isset($_SESSION['conta'])) {
 } else {
 
   require("../src/backend/conecta.php");
+  
+  $fuso = new DateTimeZone('America/Sao_Paulo');
+  $data = new DateTime('now');
+  $data->setTimezone($fuso);
+  $dataAtual =  $data->format('d-m-Y H:i:s');
+
+  $horaAtual    = $data->format('H');
+  settype($horaAtual, "integer");
+  $minutoAtual  = $data->format('i');
+  settype($minutoAtual, "integer");
+  $diaAtual     = $data->format('d');
+  settype($diaAtual, "integer");
+  $mesAtual     = $data->format('m');
+  settype($mesAtual, "integer");
+  $anoAtual     = $data->format('Y');
+  settype($anoAtual, "integer");
+
+  $tempoAtualEmMinutos = ($horaAtual * 60) + $minutoAtual;
+  $ultimoHorarioModificado = NULL;
+  
 
   $acumuladoGeralTotal = 0;
   $acumuladoGeralDiario = 0;
   $acumuladoGeralSemanal = 0;
   $acumuladoGeralMensal = 0;
 
+  
   $sql = "SELECT * FROM `tbl_robos_mt5` WHERE `Status` = 'Ativo'";
   $result = $conn->query($sql);
   if ($result->num_rows >= 0) {
     while ($row = $result->fetch_array()) {
-      $acumuladoGeralTotal += $row['AcumuladoTotal'];
-      $acumuladoGeralDiario += $row['AcumuladoDiario'];
-      $acumuladoGeralSemanal += $row['AcumuladoSemanal'];
-      $acumuladoGeralMensal += $row['AcumuladoMensal'];
+      $ultimoHorarioModificado = new DateTime($row['Modificado']);
 
-      //Como descobrir se o robô não está ativo
-      //Aqui eu vou colocar que se o robô não estiver posicionado, não estiver no último nível e não estiver com problemas, quando o valor que está em modificado tiver com uma diferença de 1 hora, eu desativo o robo, porém o robo vai ter q ficar mandando sinal de vida (sinal que está ativo a cada 30min)
-      // if($row['Modificado'] < HorarioAtual - 1hora){
-      //   //Aki tem que atualizar o banco dizendo q o robô não esta mais ativo
-      // }
+      $horaUltimoHorarioModificado   = $ultimoHorarioModificado->format('H');
+      settype($horaUltimoHorarioModificado, "integer");
+      $minutoUltimoHorarioModificado = $ultimoHorarioModificado->format('i');
+      settype($minutoUltimoHorarioModificado, "integer");
+      $diaUltimoHorarioModificado    = $ultimoHorarioModificado->format('d');
+      settype($diaUltimoHorarioModificado, "integer");
+      $mesUltimoHorarioModificado    = $ultimoHorarioModificado->format('m');
+      settype($mesUltimoHorarioModificado, "integer");
+      $anoUltimoHorarioModificado    = $ultimoHorarioModificado->format('Y');
+      settype($anoUltimoHorarioModificado, "integer");
+
+      $tempoUltimoHorarioModificadoEmMinutos = ($horaUltimoHorarioModificado * 60) + $minutoUltimoHorarioModificado;
+      // printf("UltimoHorarioModificado <br> Hora/Minuto: %d/%d --- %d minutos", $horaUltimoHorarioModificado, $minutoUltimoHorarioModificado, $tempoUltimoHorarioModificadoEmMinutos);
+      
+      if ($tempoAtualEmMinutos > ($tempoUltimoHorarioModificadoEmMinutos + 35) || $diaAtual != $diaUltimoHorarioModificado || $mesAtual != $mesUltimoHorarioModificado || $anoAtual != $anoUltimoHorarioModificado) {
+        // echo 'Robô inativo';
+        //Aqui tem q atualizar o banco 
+        $idLinha = $row['Id'];
+        $sqlUpdate = "UPDATE `tbl_robos_mt5` SET `Status` = 'Inativo' WHERE `tbl_robos_mt5`.`Id` = $idLinha";
+
+        $salvounobanco = mysqli_query($conn, $sqlUpdate);
+        
+        // if ($salvounobanco) {
+        //     mysqli_close($conn);
+        // }
+      }
+    }
+  }
+
+  
+
+  $sql2 = "SELECT * FROM `tbl_robos_mt5` WHERE `Status` = 'Ativo'";
+  $result2 = $conn->query($sql2);
+  if ($result2->num_rows >= 0) {
+    while ($row2 = $result2->fetch_array()) {
+      $acumuladoGeralTotal += $row2['AcumuladoTotal'];
+      $acumuladoGeralDiario += $row2['AcumuladoDiario'];
+      $acumuladoGeralSemanal += $row2['AcumuladoSemanal'];
+      $acumuladoGeralMensal += $row2['AcumuladoMensal'];
     }
   }
 
