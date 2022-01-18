@@ -57,7 +57,7 @@ if (!isset($_SESSION['conta'])) {
       $tempoUltimoHorarioModificadoEmMinutos = ($horaUltimoHorarioModificado * 60) + $minutoUltimoHorarioModificado;
       // printf("UltimoHorarioModificado <br> Hora/Minuto: %d/%d --- %d minutos", $horaUltimoHorarioModificado, $minutoUltimoHorarioModificado, $tempoUltimoHorarioModificadoEmMinutos);
       
-      if ($tempoAtualEmMinutos > ($tempoUltimoHorarioModificadoEmMinutos + 35) || $diaAtual != $diaUltimoHorarioModificado || $mesAtual != $mesUltimoHorarioModificado || $anoAtual != $anoUltimoHorarioModificado) {
+      if ($tempoAtualEmMinutos > ($tempoUltimoHorarioModificadoEmMinutos + 15) || $diaAtual != $diaUltimoHorarioModificado || $mesAtual != $mesUltimoHorarioModificado || $anoAtual != $anoUltimoHorarioModificado) {
         // echo 'Robô inativo';
         //Aqui tem q atualizar o banco 
         $idLinha = $row['Id'];
